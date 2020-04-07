@@ -1,9 +1,17 @@
 # LOD2XMI
-Transforming Linked Data Models (RDFS/OWL/SHACL) to XMI to UML
+Transforming Linked Data Models (OWL/SHACL) to XMI to UML
 
 
-![alt text](https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/figuur01.JPG "virtual catalogue")
+![](https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/figuur01.JPG "virtual datacatalogue")
 
+In the world of linked open data (LOD) instance data is closely related to the OWL (web ontology language) in the catalogue like this:
 
+* school Treehouse is a thing of type  School which is a owl:Class
+* school Treehouse has zipcode "8043AV" whereas zipcode is a owl:DatatypeProperty
+* school Treehouse has level "secundary" whereas level is a owl:ObjectProperty pointing to a owl:Class with a enumerationlist.
 
+The OWL-elements point to skos:Concepts containing the explanation of there use to humans.  The Simple Knowlegde Organization System (SKOS) is "comply-or-explain"  for this kind of publication from the Dutch government.  These terms and there relationsips even higer level terms are expressed als skos:Concepts.
 
+Also, in de figure above SHACL can be found. In de linked data world this can be used for validation of instancedata like a XML-file can be validated with a XML Schema Diagram (XSD). For example, with SHACL it can be expressed that a school published as Linked Open Data is only valid when a zipcode is present and that it has a certain format.
+
+This GITHUB repository is dedicated to the comsumption of modelinformation on the world wide web or semantic web. Models are mostly created using the  grafical modelling language UML in some modelling tool and more and more often published as linked open data. The goal is to reuse model information in another modelling tool. That must be possible when the OWL/SHACL publication is transformed into the XML Metadata Interchange (XMI). By consequently following this route the semantic web becomes what Tim Berners-Lee meant: a global dataspace.
