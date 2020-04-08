@@ -65,7 +65,7 @@
 			</u>
 			<br/>
 			<!-- fetch with object-key en make distinct sh:PropertyShape constraints with for-each-group -->
-			<xsl:for-each-group select="key('object', @rdf:about)/.." group-by="sh:path">
+			<xsl:for-each-group select="key('object', @rdf:about)/.." group-by="sh:path/@rdf:resource">
 			coretype: <xsl:value-of select="sh:datatype/@rdf:resource"/>
 				<br/>
 			length: <xsl:value-of select="sh:minLength"/>..<xsl:value-of select="sh:maxLength"/>
@@ -85,7 +85,7 @@
 				<xsl:variable name="enum" select="key('subject', rdfs:range/@rdf:resource)/rdfs:label"/>
 				<xsl:message>	-  <xsl:value-of select="$enum"/>
 				</xsl:message>
-				<u>enumeration: <xsl:value-of select="$enum"/>)	
+				<u>enumeration: <xsl:value-of select="$enum"/>	
 					</u>
 				<br/>
 				<!-- fetch enumeration literals at owl:Class -->
@@ -96,7 +96,7 @@
 				</xsl:for-each>		
 			+<br/>
 				<!-- fetch with object-key en make distinct sh:PropertyShape constraints with for-each-group -->
-				<xsl:for-each-group select="key('object', @rdf:about)/.." group-by="sh:path">
+				<xsl:for-each-group select="key('object', @rdf:about)/.." group-by="sh:path/@rdf:resource">
 			coretype: <xsl:value-of select="sh:datatype/@rdf:resource"/>
 					<br/>
 			length: <xsl:value-of select="sh:minLength"/>..<xsl:value-of select="sh:maxLength"/>
