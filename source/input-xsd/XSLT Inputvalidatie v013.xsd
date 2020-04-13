@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- W3C Schema using XMLSpy v2020 rel. 2 (x64) (http://www.altova.com) -->
+<!-- RDFS target namespace -->
+
+<xs:schema xmlns="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" targetNamespace="http://www.w3.org/2000/01/rdf-schema#">
+	<xs:import namespace="http://www.w3.org/2002/07/owl#" schemaLocation="XSLT%20Inputvalidatie%20v011.xsd"/>
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
+	<xs:import namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" schemaLocation="XSLT%20Inputvalidatie%20v01.xsd"/>
+	<xs:element name="comment">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="xml:lang" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="isDefinedBy">
+		<xs:complexType>
+			<xs:attribute ref="rdf:resource" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="label">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="xml:lang" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="range">
+		<xs:complexType>
+			<xs:attribute ref="rdf:resource" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="subClassOf">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="owl:Class"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

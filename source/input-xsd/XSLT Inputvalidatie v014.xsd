@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- W3C Schema using XMLSpy v2020 rel. 2 (x64) (http://www.altova.com) -->
+<!-- SHACL target namespace -->
+
+<xs:schema xmlns="http://www.w3.org/ns/shacl#" xmlns:sh="http://www.w3.org/ns/shacl#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" targetNamespace="http://www.w3.org/ns/shacl#">
+	<xs:import namespace="http://www.w3.org/2002/07/owl#" schemaLocation="XSLT%20Inputvalidatie%20v011.xsd"/>
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
+	<xs:import namespace="http://www.w3.org/2000/01/rdf-schema#" schemaLocation="XSLT%20Inputvalidatie%20v013.xsd"/>
+	<xs:import namespace="http://www.w3.org/1999/02/22-rdf-syntax-ns#" schemaLocation="XSLT%20Inputvalidatie%20v01.xsd"/>
+	
+	<xs:element name="NodeShape">
+		<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="rdfs:isDefinedBy" minOccurs="0"/>
+					<xs:element ref="sh:name"/>
+					<xs:element ref="sh:targetClass"/>
+					<xs:choice>
+						<xs:element ref="sh:property" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element ref="sh:in"/>
+					</xs:choice>
+				</xs:sequence>
+			<xs:attribute ref="rdf:about" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="PropertyShape">
+		<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="rdfs:isDefinedBy" minOccurs="0"/>
+					<xs:element ref="sh:name"/>
+					<xs:element ref="sh:nodeKind"/>
+					<xs:element ref="sh:path"/>
+					<!-- Nota bene: volgorde en aantal elementen is deels losgelaten omdat origineel niet deterministisch is --> 
+					<xs:sequence maxOccurs="3">
+					<xs:choice>
+						<xs:sequence>							
+							<xs:element ref="sh:datatype"/>
+							<xs:element ref="sh:minLength" minOccurs="0"/>
+							<xs:element ref="sh:maxLength" minOccurs="0"/>	
+						</xs:sequence>						
+						<xs:sequence>							
+							<xs:element ref="sh:class" />
+							<xs:element ref="sh:node"/>
+						</xs:sequence>	
+						<xs:sequence>							
+							<xs:element ref="sh:minCount" minOccurs="0"/>
+							<xs:element ref="sh:maxCount" minOccurs="0"/>
+							<xs:element ref="sh:pattern" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>	
+					</xs:choice>								
+					</xs:sequence>				
+				</xs:sequence>				
+			<xs:attribute ref="rdf:about" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	
+	<xs:element name="class">
+		<xs:complexType>
+			<xs:attribute ref="rdf:resource" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="datatype">
+		<xs:complexType>
+			<xs:attribute ref="rdf:resource" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="in">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="rdf:Description"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+
+	<xs:element name="maxCount">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="rdf:datatype" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="maxLength">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="rdf:datatype" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="minCount">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="rdf:datatype" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="minLength">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="rdf:datatype" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="name">
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="xs:string">
+					<xs:attribute ref="xml:lang" use="required"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="node">
+		<xs:complexType>
+			<xs:attribute ref="rdf:resource" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="nodeKind">
+		<xs:complexType>
+			<xs:attribute ref="rdf:resource" use="required"/>
+		</xs:complexType>		
+	</xs:element>
+	
+	<xs:element name="path">
+		<xs:complexType>
+			<xs:sequence>
+<!-- noot GGR: ik verwacht dat dit een specificieke oplossing is van http://www.easyrdf.org/converter  -->			
+				<xs:element ref="owl:ObjectProperty" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute ref="rdf:resource"/>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="pattern">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+
+	<xs:element name="property">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="sh:PropertyShape"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="targetClass">
+		<xs:complexType>
+			<xs:attribute ref="rdf:resource" use="required"/>
+		</xs:complexType>
+	</xs:element>
+
+</xs:schema>
