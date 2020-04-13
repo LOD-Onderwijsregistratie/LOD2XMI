@@ -17,7 +17,7 @@ XML-spy 2020 v2 (as xslt-processor) and Enterprise Architect 12.0.1210 (uml-tool
 1. RDF doesn"t have bidirectional relationships. You need two inversed properties. That is not within the present scope. So the multiplicity for the target is undetermined.
 2. Classes have attributes with a domain defined by a rich datatype. 
 3. Rich datatypes (including enumerations) are a specialisation of a core datatype. Those are selected by the Dutch government based GAB-project. The MIM-project provided a translation between this and the XSD types.
-4. Classes and datatypes have a special tagged value rdfType with a (resolvable) uri that referes to the original datatype. Links to skos:concept are found there.
+4. Classes and datatypes have a special tagged value rdfType with a (resolvable) uri that referes to the original datatype. Links to skos:concept's are found there.
                 
 * rdf2xml-mim-v02.xslt 
 
