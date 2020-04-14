@@ -4,7 +4,7 @@ This is a place to share XML Schema Diagrams (XSD) to validate the RDF/XML-input
 
 This schema (actually five for every target namespace one) in raw form can directly be used from github by adding
 
-https://raw.githubusercontent.com/LOD-Onderwijsregistratie/LOD2XMI/master/source/xsd/easyrdf/XSLT%20Inputvalidatie%20v01.xsd
+https://raw.githubusercontent.com/LOD-Onderwijsregistratie/LOD2XMI/master/source/input-xsd/XSLT%20Inputvalidatie%20v01.xsd
 
 to the  xsi:schemaLocation attribute of your datafile.
 
