@@ -9,10 +9,7 @@ This stylesheet picks-out the major modelelements in the input-file en transform
 * rdf2xml-basic-v02.xslt 
 
 This is the first real transformation to XMI/UML that can actually be imported. It produces straight UML classes, datatypes, relationships etc from https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/source/examples/RIO-snipper-easyrdf.xml using 
-XML-spy 2020 v2 (as xslt-processor) and Enterprise Architect 12.0.1210 (uml-tool). After dragging the elements to a UML-diagram it will look like this:
-
-![]( https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/source/xslt/figuur03.JPG "figure 3. result basic")
-
+XML-spy 2020 v2 (as xslt-processor) and Enterprise Architect 12.0.1210 (uml-tool). 
 *Notes:* 
 1. RDF doesn"t have bidirectional relationships. You need two inversed properties. That is not within the present scope. So the multiplicity for the target is undetermined.
 2. Classes have attributes with a domain defined by a rich datatype. 
