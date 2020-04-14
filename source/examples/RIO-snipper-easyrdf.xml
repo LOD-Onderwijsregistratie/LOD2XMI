@@ -5,7 +5,7 @@
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:sh="http://www.w3.org/ns/shacl#"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://www.w3.org/1999/02/22-rdf-syntax-ns# https://raw.githubusercontent.com/LOD-Onderwijsregistratie/LOD2XMI/master/source/xsd/easyrdf/XSLT%20Inputvalidatie%20v01.xsd">
+         xsi:schemaLocation="https://raw.githubusercontent.com/LOD-Onderwijsregistratie/LOD2XMI/master/source/input-xsd/XSLT%20Inputvalidatie%20v01.xsd">
 
 	<owl:Ontology rdf:about="http://lod.onderwijsregistratie.nl/doc/ontology/RIO-SNIPPER">
 		<dc:title xml:lang="nl">Ontologie Registratie Instellingen en Opleidingen</dc:title>
