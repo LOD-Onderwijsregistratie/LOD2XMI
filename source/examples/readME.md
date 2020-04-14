@@ -17,7 +17,7 @@ or..
     <rdfs:comment xml:lang="nl">Is het geheel van bekwaamheden voor</rdfs:comment>
   </rdf:Description>
 >
-They are both valid and express the same content. Not sure which one pops up when. So we have to deal with both. Here follow some data-exampes encountered:
+They are both valid and express the same content. Not sure which one pops up when, so we have to deal with both. Next some data-exampels encountered:
 
 * RIO-snipper-easyrdf
 
