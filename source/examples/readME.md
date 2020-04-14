@@ -3,19 +3,19 @@
 Unfortunately there seem to be two different ways to express the linked datacontent with rdf/xml. A major difference is this:
 
 > ### example 1
-<owl:Class rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
-	<rdfs:label xml:lang="nl">Opleiding</rdfs:label>
-	<rdfs:comment xml:lang="nl">Is het geheel van bekwaamheden voor</rdfs:comment>
- </owl:Class>
+- <owl:Class rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
+-	<rdfs:label xml:lang="nl">Opleiding</rdfs:label>
+-	<rdfs:comment xml:lang="nl">Is het geheel van bekwaamheden voor</rdfs:comment>
+- </owl:Class>
 >
 or..
 
 > ### example 2
-<rdf:Description rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
-    <rdfs:label xml:lang="nl">Opleiding</rdfs:label>
-    <rdfs:comment xml:lang="nl">Is het geheel van bekwaamheden voor</rdfs:comment>
-  </rdf:Description>
+- <rdf:Description rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
+-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+-    <rdfs:label xml:lang="nl">Opleiding</rdfs:label>
+-    <rdfs:comment xml:lang="nl">Is het geheel van bekwaamheden voor</rdfs:comment>
+-  </rdf:Description>
 >
 They are both valid and express the same content. This difference is important for a XSLT transformation.  Not sure which one pops up when, so we have to deal with both. Next, some data-examples encountered:
 
