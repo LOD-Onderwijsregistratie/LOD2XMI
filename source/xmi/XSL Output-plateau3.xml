@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Generated with rdf2xmi-basic.xslt 2020-04-13T20:19:27+02:00-->
+<XMI xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sh="http://www.w3.org/ns/shacl#" xmlns:UML="http://schema.omg.org/spec/UML/2.5.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmi.version="1.3">
+	<XMI.header>
+		<XMI.documentation>
+			<XMI.exporter>Onderwijscatalogus</XMI.exporter>
+			<XMI.exporterVersion>0.1</XMI.exporterVersion>
+		</XMI.documentation>
+	</XMI.header>
+	<XMI.content>
+		<UML:Model xmi.type="UML:Model" xmi.id="http://lod.onderwijsregistratie.nl" name="Onderwijsdatamodel">
+			<UML:Namespace.ownedElement>
+				<!-- ## CORE DATATYPES ##-->
+				<UML:Package xmi.type="UML:Package" xmi.id="http://lod.onderwijsregistratie.nl/gab" name="GAB">
+					<UML:Namespace.ownedElement>
+						<UML:DataType name="Characterstring" xmi.id="http://bp4mc2.org/def/mim#Characterstring"/>
+						<UML:DataType name="Integer" xmi.id="http://bp4mc2.org/def/mim#Integer"/>
+						<UML:DataType name="Real" xmi.id="http://bp4mc2.org/def/mim#Real"/>
+						<UML:DataType name="Decimal" xmi.id="http://bp4mc2.org/def/mim#Decimal"/>
+						<UML:DataType name="Boolean" xmi.id="http://bp4mc2.org/def/mim#Boolean"/>
+						<UML:DataType name="Date" xmi.id="http://bp4mc2.org/def/mim#Date"/>
+						<UML:DataType name="DateTime" xmi.id="http://bp4mc2.org/def/mim#DateTIme"/>
+						<UML:DataType name="Year" xmi.id="http://bp4mc2.org/def/mim#Year"/>
+						<UML:DataType name="Day" xmi.id="http://bp4mc2.org/def/mim#Day"/>
+						<UML:DataType name="Month" xmi.id="http://bp4mc2.org/def/mim#Month"/>
+						<UML:DataType name="URI" xmi.id="http://bp4mc2.org/def/mim#URI"/>
+					</UML:Namespace.ownedElement>
+				</UML:Package>
+				<!-- ## CANONICAL DATATYPES/ENUMERATION ##-->
+				<UML:Package xmi.type="UML:Package" xmi.id="http://lod.onderwijsregistratie.nl/cdm" name="CDM">
+					<UML:Namespace.ownedElement>
+						<!--rich datatype Organisatienaam-->
+						<UML:DataType name="Organisatienaam" xmi.id="http://lod.onderwijsregistratie.nl/cat/cdm/def/organisatienaam"/>
+						<!--generalization of Organisatienaam-->
+						<UML:Generalization subtype="http://lod.onderwijsregistratie.nl/cat/cdm/def/organisatienaam" supertype="http://bp4mc2.org/def/mim#Characterstring" xmi.id="idelem3x183"/>
+						<!--rich datatype Postcode-->
+						<UML:DataType name="Postcode" xmi.id="http://lod.onderwijsregistratie.nl/cat/cdm/def/postcode"/>
+						<!--generalization of Postcode-->
+						<UML:Generalization subtype="http://lod.onderwijsregistratie.nl/cat/cdm/def/postcode" supertype="http://bp4mc2.org/def/mim#Characterstring" xmi.id="idelem3x99"/>
+						<!--enumeration Denominatie-->
+						<UML:Enumeration name="Denominatie" xmi.id="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie">
+							<UML:Classifier.feature>
+								<UML:Attribute name="OPB" xmi.id="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/OPB"/>
+								<UML:Attribute name="RK" xmi.id="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/RK"/>
+							</UML:Classifier.feature>
+						</UML:Enumeration>
+						<!--generalization of Denominatie-->
+						<UML:Generalization subtype="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie" supertype="http://bp4mc2.org/def/mim#Characterstring" xmi.id="idelem3x119"/>
+					</UML:Namespace.ownedElement>
+				</UML:Package>
+				<!-- ## LOGICAL DATAMODEL  ## -->
+				<UML:Package xmi.type="UML:Package" xmi.id="http://lod.onderwijsregistratie.nl/LDM" name="LDM">
+					<UML:Namespace.ownedElement>
+						<!--class  Onderwijsaanbieder-->
+						<UML:Class name="Onderwijsaanbieder" xmi.id="http://lod.onderwijsregistratie.nl/cat/rio/def/Onderwijsaanbieder">
+							<UML:Classifier.feature>
+								<UML:Attribute name="Postcode" xmi.id="http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder/postcode" type="http://lod.onderwijsregistratie.nl/cat/cdm/def/postcode">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="lowerBound" value="1"/>
+										<UML:TaggedValue tag="upperBound" value="1"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Attribute>
+								<UML:Attribute name="heeft richtingen" xmi.id="http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder/denominatie" type="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="lowerBound" value="1"/>
+										<UML:TaggedValue tag="upperBound" value="2"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Attribute>
+							</UML:Classifier.feature>
+						</UML:Class>
+						<!--generalization of Onderwijsaanbieder-->
+						<UML:Generalization subtype="http://lod.onderwijsregistratie.nl/cat/rio/def/Onderwijsaanbieder" supertype="http://lod.onderwijsregistratie.nl/cat/rio/def/Organisatie" xmi.id="idelem3x70"/>
+						<!--association starting at source Onderwijsaanbieder-->
+						<UML:Association name="" xmi.id="http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder/biedtAan">
+							<UML:Association.connection>
+								<UML:AssociationEnd multiplicity="0..*" type="http://lod.onderwijsregistratie.nl/cat/rio/def/Onderwijsaanbieder"/>
+								<UML:AssociationEnd type="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding"/>
+							</UML:Association.connection>
+						</UML:Association>
+						<!--class  Opleiding-->
+						<UML:Class name="Opleiding" xmi.id="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
+							<UML:Classifier.feature>
+								<UML:Attribute name="heeft richtingen" xmi.id="http://lod.onderwijsregistratie.nl/cat/rio/sh/Opleiding/denominatie" type="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="lowerBound" value="0"/>
+										<UML:TaggedValue tag="upperBound" value="1"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Attribute>
+							</UML:Classifier.feature>
+						</UML:Class>
+						<!--association starting at source Opleiding-->
+						<!--class  Organisatie-->
+						<UML:Class name="Organisatie" xmi.id="http://lod.onderwijsregistratie.nl/cat/rio/def/Organisatie">
+							<UML:Classifier.feature>
+								<UML:Attribute name="Naam" xmi.id="http://lod.onderwijsregistratie.nl/cat/rio/sh/Organisatie/naam" type="http://lod.onderwijsregistratie.nl/cat/cdm/def/organisatienaam">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="lowerBound" value="1"/>
+										<UML:TaggedValue tag="upperBound" value="1"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Attribute>
+								<UML:Attribute name="Postcode" xmi.id="http://lod.onderwijsregistratie.nl/cat/rio/sh/Organisatie/postcode" type="http://lod.onderwijsregistratie.nl/cat/cdm/def/postcode">
+									<UML:ModelElement.taggedValue>
+										<UML:TaggedValue tag="lowerBound" value="1"/>
+										<UML:TaggedValue tag="upperBound" value="1"/>
+									</UML:ModelElement.taggedValue>
+								</UML:Attribute>
+							</UML:Classifier.feature>
+						</UML:Class>
+						<!--association starting at source Organisatie-->
+					</UML:Namespace.ownedElement>
+				</UML:Package>
+			</UML:Namespace.ownedElement>
+		</UML:Model>
+		<!-- ## TAGGED VALUES FOR DATATYPES/CLASSES ##-->
+		<!--Organisatienaam-->
+		<UML:TaggedValue tag="rdfType" xmi.id="idelem3x9" value="http://lod.onderwijsregistratie.nl/cat/cdm/def/organisatienaam" modelElement="http://lod.onderwijsregistratie.nl/cat/cdm/def/organisatienaam"/>
+		<UML:TaggedValue tag="maxLength" xmi.id="idelem3x189" value="100" modelElement="http://lod.onderwijsregistratie.nl/cat/cdm/def/organisatienaam"/>
+		<!--Postcode-->
+		<UML:TaggedValue tag="rdfType" xmi.id="idelem3x14" value="http://lod.onderwijsregistratie.nl/cat/cdm/def/postcode" modelElement="http://lod.onderwijsregistratie.nl/cat/cdm/def/postcode"/>
+		<UML:TaggedValue tag="minLength" xmi.id="idelem3x106" value="6" modelElement="http://lod.onderwijsregistratie.nl/cat/cdm/def/postcode"/>
+		<UML:TaggedValue tag="maxLength" xmi.id="idelem3x108" value="6" modelElement="http://lod.onderwijsregistratie.nl/cat/cdm/def/postcode"/>
+		<UML:TaggedValue tag="pattern" xmi.id="idelem3x114" value="([1-9]{1}[0-9]{3}[A-Z]{2})" modelElement="http://lod.onderwijsregistratie.nl/cat/cdm/def/postcode"/>
+		<UML:TaggedValue tag="pattern" xmi.id="idelem3x116" value="([1-9]{1}[0-9]{3}[A-Z]{2})2x" modelElement="http://lod.onderwijsregistratie.nl/cat/cdm/def/postcode"/>
+		<!--Denominatie-->
+		<UML:TaggedValue tag="rdfType" xmi.id="idelem3x20" value="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie" modelElement="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie"/>
+		<UML:TaggedValue tag="minLength" xmi.id="idelem3x128" value="1" modelElement="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie"/>
+		<UML:TaggedValue tag="maxLength" xmi.id="idelem3x130" value="10" modelElement="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie"/>
+		<UML:TaggedValue tag="pattern" xmi.id="idelem3x136" value="[A-Z0-9_]*" modelElement="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie"/>
+		<!--Onderwijsaanbieder-->
+		<UML:TaggedValue tag="rdfType" xmi.id="idelem3x63" value="http://lod.onderwijsregistratie.nl/cat/rio/def/Onderwijsaanbieder" modelElement="http://lod.onderwijsregistratie.nl/cat/rio/def/Onderwijsaanbieder"/>
+		<!--Opleiding-->
+		<UML:TaggedValue tag="rdfType" xmi.id="idelem3x138" value="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding" modelElement="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding"/>
+		<!--Organisatie-->
+		<UML:TaggedValue tag="rdfType" xmi.id="idelem3x170" value="http://lod.onderwijsregistratie.nl/cat/rio/def/Organisatie" modelElement="http://lod.onderwijsregistratie.nl/cat/rio/def/Organisatie"/>
+	</XMI.content>
+</XMI>
