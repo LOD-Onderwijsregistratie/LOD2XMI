@@ -1,6 +1,6 @@
 # Data-examples
 
-Unfortunately there seem to be two different ways to express the seem linked datacontent  with rdf/xml. A major difference is this:
+Unfortunately there seem to be two different ways to express the linked datacontent with rdf/xml. A major difference is this:
 
 > ### example 1
 <owl:Class rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
@@ -17,7 +17,7 @@ or..
     <rdfs:comment xml:lang="nl">Is het geheel van bekwaamheden voor</rdfs:comment>
   </rdf:Description>
 >
-They are both valid and express the same content. Not sure which one pops up when, so we have to deal with both. Next some data-exampels encountered:
+They are both valid and express the same content. This difference is important for a XSLT transformation.  Not sure which one pops up when, so we have to deal with both. Next, some data-examples encountered:
 
 * RIO-snipper-easyrdf
 
