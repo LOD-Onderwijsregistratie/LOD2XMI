@@ -1,5 +1,4 @@
-# LOD2XMI
-Transforming Linked Data Models (OWL/SHACL) to XMI to UML
+# Transforming Linked Data Models (RDF/OWL/SHACL) to XMI to UML
 
 
 ![](https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/figuur01.JPG "virtual datacatalogue")
