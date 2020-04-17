@@ -1,6 +1,6 @@
 # Data-examples
 
-Unfortunately there seem to be two different ways to express the linked datacontent with rdf/xml. A major difference is this:
+Unfortunately there seem to be  different ways to express the linked datacontent with rdf/xml. A major difference is this:
 
 > ### example 1
 - <owl:Class rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
@@ -19,18 +19,14 @@ or..
 >
 They are both valid and express the same content. This difference is important for a XSLT transformation.  Not sure which one pops up when, so we have to deal with both. Next, some data-examples encountered:
 
-* RIO-snipper-easyrdf
+* RIO-snipper-easyrdf (example 1)
 
 This is a small data example, not neccesarily real, from the RIO world (Register Instellingen en Opleiding = Registry for Schools and Education in the Netherlands) originally serialized als Turtle and transformed into  rdf/xml  with an open convertor: 
-http://www.easyrdf.org/converter. Some worries with this rdf/xml file:
+http://www.easyrdf.org/converter. 
 
-   1. xs:choices must be distinguisable, by alternating element order in the original file XSD not as severe as could be
-   2. enumerations in rdf-collections are constructed with rdf:Description, it's not the only alternative
-   3. arbitrary choises regarding  a sub-element or attribute rdf:resource (rdfs:subClassOf and sh:path)
+* RIO-snipper-virtuoso (example 2)
 
-* RIO-snipper-virtuoso (next)
-
-The same dataset as above, but this time retrieved from the sparql endpoint from Virtuoso and directly serialized as rdf/XML.
+This is the same example as the first, but this time constructed with the sparql endpoint from Virtuoso and there serialized as rdf/xml. 
 
 
 
