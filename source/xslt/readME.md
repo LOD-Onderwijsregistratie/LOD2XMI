@@ -13,7 +13,7 @@ This stylesheet picks-out the major modelelements in the input-file en transform
 This is  transformation to XMI that can actually be imported as UML. It produces straight UML classes, datatypes, relationships etc. Using XML-spy 2020 v2 as xslt-processor that can be imported in Enterprise Architect 12.0.1210.
 
 *Notes:* 
-1. RDF doesn"t have bidirectional relationships. You need two inversed properties. That is not within the present scope. So the multiplicity for the target is undetermined.
+1. RDF doesn't have bidirectional relationships. One would need two inversed properties. That is not within the present scope. So the multiplicity for the target is undetermined.
 2. All attributes with a domain defined by a rich datatype. 
 3. Rich datatypes (including enumerations) are a specialisation of a core datatype. This XSLT casts the rdf/xml to the selection by the Dutch government based GAB-project.
 4. Elements have a special tagged value called 'rdfType' with a (resolvable) uri that referes to the original datatype
