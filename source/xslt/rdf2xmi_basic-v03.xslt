@@ -98,7 +98,7 @@
 
 					<!-- classes/objecttypes variant 1 & 2 -->
 					<xsl:message>Classes/objecttypes:</xsl:message>
-					<xsl:apply-templates select="//sh:NodeShape[exists(sh:property)]" mode="class"/>
+					<xsl:apply-templates select="//sh:NodeShape" mode="class"/>
 					<xsl:apply-templates select="//rdf:Description[rdf:type/@rdf:resource='http://www.w3.org/ns/shacl#NodeShape']" mode="class"/>
 
 
@@ -285,12 +285,16 @@
 
 	<!-- classes variant 1 -->
 	<xsl:template match="sh:NodeShape" mode="class">
-		<xsl:call-template name="class"/>
+		<xsl:if test="exists(sh:property)">
+			<xsl:call-template name="class"/>	
+		</xsl:if>
 	</xsl:template>
 
 	<!-- classes variant 2-->
 	<xsl:template match="rdf:Description" mode="class">
-		<xsl:call-template name="class"/>	
+		<xsl:if test="exists(sh:property)">
+			<xsl:call-template name="class"/>	
+		</xsl:if>
 	</xsl:template>
 	
 <!-- classes -->
