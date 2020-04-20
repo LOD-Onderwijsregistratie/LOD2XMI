@@ -1,5 +1,6 @@
 #  Documentation
 
+![](https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/figuur01.JPG "virtual datacatalogue")
 
 
 
