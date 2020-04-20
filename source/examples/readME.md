@@ -1,8 +1,12 @@
 # Data-examples
 
-There seem to be major differences tot express linked datacontent with rdf/xml. 
+This directory contains  a small data example, not neccesarily real, from the RIO world (Register Instellingen en Opleiding = Registry for Schools and Education in the Netherlands). The original is Turtle:
 
-> ### example 1
+* RIO-snipper
+
+This is transformed into rdf/xml. There seem to be major differences tot express linked datacontent with rdf/xml. 
+
+> ### format 1
 - <owl:Class rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
 -	<rdfs:label xml:lang="nl">Opleiding</rdfs:label>
 -	<rdfs:comment xml:lang="nl">Is het geheel van bekwaamheden voor</rdfs:comment>
@@ -10,14 +14,15 @@ There seem to be major differences tot express linked datacontent with rdf/xml.
 >
 or..
 
-> ### example 2
+> ###  format 2
 - <rdf:Description rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
 -    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
 -    <rdfs:label xml:lang="nl">Opleiding</rdfs:label>
 -    <rdfs:comment xml:lang="nl">Is het geheel van bekwaamheden voor</rdfs:comment>
 -  </rdf:Description>
 >
-They are both valid and express the same content. This difference is important for a XSLT transformation.  Not sure which one pops up when, so we have to deal with both. This directory contains  a small data example, not neccesarily real, from the RIO world (Register Instellingen en Opleiding = Registry for Schools and Education in the Netherlands) obtained with different platforms:
+
+These formats are both valid and express the same content. This difference is important for a XSLT transformation.  Not sure which one pops up when, so we have to check different platforms:
 
 * RIO-snipper-easyrdf
 
