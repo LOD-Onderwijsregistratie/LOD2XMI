@@ -1,4 +1,20 @@
-#  List of usefull standards and methods
+#  Documentation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 * https://github.com/Geonovum/MIM-Werkomgeving
 
