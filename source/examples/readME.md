@@ -6,7 +6,7 @@ This directory contains  a small data example, not neccesarily real, from the RI
 
 This is transformed into rdf/xml because that is waht XSLT acts upon. However, there seem to be major differences to express linked datacontent with rdf/xml. 
 
-      > ### format 1
+      > format 1
       - <owl:Class rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
       -	<rdfs:label xml:lang="nl">Opleiding</rdfs:label>
       -	<rdfs:comment xml:lang="nl">Is het geheel van bekwaamheden voor</rdfs:comment>
@@ -14,7 +14,7 @@ This is transformed into rdf/xml because that is waht XSLT acts upon. However, t
       >
       or..
 
-      > ###  format 2
+      > format 2
       - <rdf:Description rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
       -    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
       -    <rdfs:label xml:lang="nl">Opleiding</rdfs:label>
