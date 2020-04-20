@@ -1,21 +1,22 @@
 # XSLT transformation
 
-These XSLT stylesheets  serve the transformation of rdf/xml-datamodels that conform to a common schema (XSD). They are first created  using XML-spy with a build-in XSLT-processor. Several other XSLT-processors exists, build-in, as API or CLI, open source and commercial. To mention the first and maybe the best: Saxon created by XSLT pioneer Michael Kay. 
+These XSLT stylesheets  serve the transformation of datamodels published as rdf/xml. They are created  using XML-spy with a build-in XSLT-processor. Several other XSLT-processors exists, build-in, as API or CLI, open source and commercial. To mention the first and maybe the best: Saxon created by XSLT pioneer Michael Kay. 
 
 These stylesheets are tested with the data-examples in https://github.com/LOD-Onderwijsregistratie/RDF2XMI2UML/tree/master/source/examples
 
-* rdf2html-v02.xslt  
+* rdf2html-v03.xslt  
 
-This stylesheet picks-out the major modelelements in the input-file en transforms these into a basis HTML-page. This is meant as an prototype. In the next stage the html-tags will be replaces by xmi-tags.
+This stylesheet picks-out the major modelelements in the input-file en transforms these into a basis HTML-page. This is meant as a prototype for the following.
 
-* rdf2xml-basic-v02.xslt (work in progress)
+* rdf2xml-basic-v03.xslt
 
-This is the first real transformation to XMI/UML that can actually be imported. It produces straight UML classes, datatypes, relationships etc using XML-spy 2020 v2 (as xslt-processor) and Enterprise Architect 12.0.1210 (uml-tool). 
+This is  transformation to XMI that can actually be imported as UML. It produces straight UML classes, datatypes, relationships etc. Using XML-spy 2020 v2 as xslt-processor that can be imported in Enterprise Architect 12.0.1210.
+
 *Notes:* 
 1. RDF doesn"t have bidirectional relationships. You need two inversed properties. That is not within the present scope. So the multiplicity for the target is undetermined.
-2. Classes have attributes with a domain defined by a rich datatype. 
-3. Rich datatypes (including enumerations) are a specialisation of a core datatype. Those are selected by the Dutch government based GAB-project. The MIM-project provided a translation between this and the XSD types.
-4. We introduces a special tagged valiue for classes and datatypes called rdfType with a (resolvable) uri that referes to the original datatype.
+2. All attributes with a domain defined by a rich datatype. 
+3. Rich datatypes (including enumerations) are a specialisation of a core datatype. This XSLT casts the rdf/xml to the selection by the Dutch government based GAB-project.
+4. Elements have a special tagged value called 'rdfType' with a (resolvable) uri that referes to the original datatype
                 
 * rdf2xml-mim-v01.xslt (next)
 
