@@ -60,6 +60,24 @@ Zoals in de registratie toegestaan en bekend is.</rdfs:comment>
 		<rdfs:comment xml:lang="nl">Rooms-Katholiek</rdfs:comment>
 	</rdf:Description>
 	
+	<!-- geschrapt omdat dit in productie ook geschrapt wordt vanwege beheerredenen -->
+	<!-- <sh:NodeShape rdf:about="http://lod.onderwijsregistratie.nl/cat/cdm/sh/Denominatie"> -->
+		<!-- <rdfs:isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/RIO-SNIPPER"/> -->
+		<!-- <sh:name xml:lang="nl">Denominatie</sh:name> -->
+		<!-- <sh:targetClass rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie"/> -->
+		<!-- <sh:in> -->
+			<!-- <rdf:Description> -->
+				<!-- <rdf:first rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/OPB"/> -->
+				<!-- <rdf:rest> -->
+					<!-- <rdf:Description> -->
+						<!-- <rdf:first rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/RK"/> -->
+						<!-- <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/> -->
+					<!-- </rdf:Description> -->
+				<!-- </rdf:rest> -->
+			<!-- </rdf:Description> -->
+		<!-- </sh:in> -->
+	<!-- </sh:NodeShape> -->
+	
 	<owl:Class rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Onderwijsaanbieder">
 		<rdfs:isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/RIO-SNIPPER"/>
 		<rdfs:label xml:lang="nl">Onderwijsaanbieder</rdfs:label>
@@ -117,6 +135,9 @@ Zoals in de registratie toegestaan en bekend is.</rdfs:comment>
 				<sh:name xml:lang="nl">heeft richtingen</sh:name>
 				<sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
 				<sh:path rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/denominatie"/>
+				<!-- geschrapt omdat dit in productie ook geschrapt wordt vanwege beheerredenen -->
+				<!-- <sh:class rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie"/> -->
+				<!-- <sh:node rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/sh/Denominatie"/> -->
 				<sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#token"/>
 				<sh:minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minLength>
 				<sh:maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</sh:maxLength>
@@ -142,6 +163,9 @@ Zoals in de registratie toegestaan en bekend is.</rdfs:comment>
 				<sh:name xml:lang="nl">heeft richtingen</sh:name>
 				<sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
 				<sh:path rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/denominatie"/>
+				<!-- geschrapt omdat dit in productie ook geschrapt wordt vanwege beheerredenen -->
+				<!-- <sh:class rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie"/> -->
+				<!-- <sh:node rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/sh/Denominatie"/> -->
 				<sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#token"/>
 				<sh:minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sh:minLength>
 				<sh:maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</sh:maxLength>
@@ -167,7 +191,7 @@ Zoals in de registratie toegestaan en bekend is.</rdfs:comment>
 		<sh:property>
 			<sh:PropertyShape rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/sh/Organisatie/naam">
 				<sh:name xml:lang="nl">Naam</sh:name>
-				<sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI"/>
+				<sh:nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal"/>
 				<sh:path rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/organisatienaam"/>
 				<sh:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#token"/>
 				<sh:maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</sh:maxLength>
