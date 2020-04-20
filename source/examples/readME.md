@@ -37,7 +37,7 @@ In this case the Turtle was loaded into the Open Link triple store Virtuoso (ope
 
 In this case the Turtle was loaded into a MarkLogic Server 10.0-2.1 (free developer license) and exported through the qconsole with a CONSTRUCT-query and  serizalized in rdf/xml form.
 
-* RIO-snipper-rdf4j.xml
+* RIO-snipper-rdf4j.rdf
 
 In this case the Turtle was loaded into an implementation of  open source Eclips RDF4J (formerly OpenRDF Sesame) and exported through the sparql endpoint with a basic CONSTRUCT-query in rdf/xml form.
 
