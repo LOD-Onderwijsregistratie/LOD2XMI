@@ -1,7 +1,7 @@
 <!--
     NAME     rdf2xmi_basic-v03.xslt
-    VERSION  0.2
-    DATE     2020-04-18
+    VERSION  0.3
+    DATE     2020-04-20
     Copyright 2020-2025
 	Author    Gerald Groot Roessink
 	Company   Dienst Uitvoering Onderwijs (DUO), The Netherlands.
@@ -18,11 +18,7 @@
     DESCRIPTION
     Transformation of RDF document with logical datamodel into basic XMI
 -->
-<!--
-    CHANGES FROM 0.1 to 0.2
-    - rdf/xml variant 2 added
-	- independent from sh:node en sh:in
--->
+
 <xsl:stylesheet xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:dc="http://purl.org/dc/terms/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sh="http://www.w3.org/ns/shacl#" xmlns:UML="http://schema.omg.org/spec/UML/2.5.1"  xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:type="http://whatever" version="2.1" exclude-result-prefixes="type">
 
 	<xsl:output method="xml" indent="yes"/>
@@ -553,12 +549,16 @@
 	
 	<!-- classes variant 1 -->
 	<xsl:template match="sh:NodeShape" mode="classtags">
-		<xsl:call-template name="classtags"/>
+		<xsl:if test="exists(sh:property)">
+			<xsl:call-template name="classtags"/>	
+		</xsl:if>	
 	</xsl:template>
 
 	<!-- classes variant 2-->
 	<xsl:template match="rdf:Description" mode="classtags">
-		<xsl:call-template name="classtags"/>	
+		<xsl:if test="exists(sh:property)">
+			<xsl:call-template name="classtags"/>	
+		</xsl:if>	
 	</xsl:template>
 	
 <!-- classes -->
