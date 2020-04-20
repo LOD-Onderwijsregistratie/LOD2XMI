@@ -1,6 +1,6 @@
 # Data-examples
 
-Unfortunately there seem to be  different ways to express the linked datacontent with rdf/xml. A major difference is this:
+There seem to be major differences tot express linked datacontent with rdf/xml. 
 
 > ### example 1
 - <owl:Class rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
@@ -17,18 +17,20 @@ or..
 -    <rdfs:comment xml:lang="nl">Is het geheel van bekwaamheden voor</rdfs:comment>
 -  </rdf:Description>
 >
-They are both valid and express the same content. This difference is important for a XSLT transformation.  Not sure which one pops up when, so we have to deal with both. Next, some data-examples encountered:
+They are both valid and express the same content. This difference is important for a XSLT transformation.  Not sure which one pops up when, so we have to deal with both. This directory contains  a small data example, not neccesarily real, from the RIO world (Register Instellingen en Opleiding = Registry for Schools and Education in the Netherlands) obtained with different platforms:
 
-* RIO-snipper-easyrdf (example 1)
+* RIO-snipper-easyrdf
 
-This is a small data example, not neccesarily real, from the RIO world (Register Instellingen en Opleiding = Registry for Schools and Education in the Netherlands) originally serialized als Turtle and transformed into  rdf/xml  with an open convertor: 
+This is originally serialized als Turtle and transformed into  rdf/xml  with an open convertor: 
 http://www.easyrdf.org/converter. 
 
-* RIO-snipper-virtuoso (example 2)
+* RIO-snipper-virtuoso
 
-This is the same example as the first, but this time constructed with the sparql endpoint from Virtuoso and there serialized as rdf/xml. 
+In this case the Turtle was loaded into the Open Link triple store Virtuoso (open source 07.20.3229) and exported again through the sparql endpoint with a basic CONSTRUCT-query in rdf/xml form.
 
+* RIO-snipper-marklogic
 
+In this case the Turtle was loaded into a MarkLogic Server 10.0-2.1 (free developer license) and exported through the qconsole with a CONSTRUCT-query and  serizalized in rdf/xml form.
 
 
 
