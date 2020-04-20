@@ -4,7 +4,7 @@ This directory contains  a small data example, not neccesarily real, from the RI
 
 * RIO-snipper.ttl
 
-## This is transformed into rdf/xml because that is waht XSLT acts upon. However, there seem to be major differences tot express linked datacontent with rdf/xml. 
+This is transformed into rdf/xml because that is waht XSLT acts upon. However, there seem to be major differences tot express linked datacontent with rdf/xml. 
 
       > ### format 1
       - <owl:Class rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
@@ -22,7 +22,7 @@ This directory contains  a small data example, not neccesarily real, from the RI
       -  </rdf:Description>
       >
 
-## These formats are both valid and express the same content. This difference is important for a XSLT transformation.  We cannot simply choose one, so we have to check different platforms:
+These formats are both valid and express the same content. This difference is important for a XSLT transformation.  We cannot simply choose one, so we have to check different platforms:
 
 * RIO-snipper-easyrdf.xml
 
