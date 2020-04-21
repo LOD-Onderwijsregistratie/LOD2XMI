@@ -5,9 +5,9 @@
 
 In the world of linked open data (LOD) instance data is closely related to the OWL (web ontology language) in the catalogue like this:
 
-* school Treehouse is a thing of type  School which is a owl:Class
-* school Treehouse has zipcode "8043AV" whereas zipcode is a owl:DatatypeProperty
-* school Treehouse has level "secundary" whereas level is a owl:ObjectProperty pointing to a owl:Class with a enumerationlist.
+* Treehouse is a kind of School which is an owl:Class
+* Treehouse has zipcode "8043AV" whereas zipcode is an owl:DatatypeProperty
+* Treehouse has level "secundary" whereas level is an owl:ObjectProperty pointing to an owl:Class with a enumerationlist.
 
 The OWL-elements point to skos:Concepts containing the explanation of there use to humans.  The Simple Knowlegde Organization System (SKOS) is "comply-or-explain"  for this kind of publication from the Dutch government.  These terms and there relationsips even higer level terms are expressed als skos:Concepts.
 
