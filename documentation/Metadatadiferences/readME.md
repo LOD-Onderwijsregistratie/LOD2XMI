@@ -1,4 +1,4 @@
-# Transmiting metadata differences
+# Transmitting metadata differences
 
 XMI has in in built-in definition for transmitting changes on existing models: adding, deleting and changing. This is 
 the way to synchronize models over different platforms.  We need to look in to that. In principle this information is also
@@ -10,5 +10,5 @@ simply delete any of it. We can only add new things since the last import and ma
 modelelement is expired and replaced with another one. The productmodel then can be improved at a convenient time.
 
 
-Seen for details:  https://www.omg.org/spec/XMI/2.5.1/PDF
+See for details:  https://www.omg.org/spec/XMI/2.5.1/PDF
 
