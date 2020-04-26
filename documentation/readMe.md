@@ -20,7 +20,7 @@ The technical model is used to generate a database or a schema to automatically 
 
 _model in Linked Data_
 
-To express a logical model in Linked Data  OWL and SHACL play an important part. OWL defines datatyping with classes and properties and possibly Description Logic although we haven't ventured there yet. SHACL is a  language that expresses the same constraints as UML can. It is crucial to explain that OWL-elements cannot have versions because the a modelchange would also mean replacing datatriples. When modelelements change the this will be expressend using SHACL-elements.
+To express a logical model in Linked Data  OWL and SHACL play an important part. OWL defines basic datatyping with classes and properties and possibly Description Logic, although we haven't ventured there yet. SHACL is a  language that expresses the same constraints as UML. It is crucial to explain that OWL-elements cannot have versions because a modelchange would then also mean replacing datatriples. When modelelements change this will be expressend using SHACL-elements. Together they provide a full description that of the logical model.
 
 
 _canonical or specific?_
@@ -29,7 +29,7 @@ Modelelements are made re-usable by submitting them into a canonical datamodel (
 
 ![](https://github.com/LOD-Onderwijsregistratie/RDF2XMI2UML/blob/master/documentation/figuur05.JPG "canonical or specific")
 
-ohfg
+etc.
 
 
 
