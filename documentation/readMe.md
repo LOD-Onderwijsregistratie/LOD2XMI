@@ -8,15 +8,15 @@ It consists of the three classical kinds of models:
 
 1. Conceptual model
 
-A conceptual model is to make people understand the data in the business and talk about it. It's elements are concepts, their textual descriptions and relationships. 
+   A conceptual model is to make people understand the data in the business and talk about it. It's elements are concepts, their textual descriptions and relationships. 
 
 2.  Logical model
 
-A logical model is to descibe "the logic" of the data in store or when shared. It determines if the data is valid or not. It should be independent of implementation. A (rich) datatype is a reusable piece of datalogic. Usually at this level the graphical Uniform Modelling Language (UML) is used. This is the kind of model this github is concerned with.
+   A logical model is to descibe "the logic" of the data in store or when shared. It determines if the data is valid or not. It should be independent of implementation. A (rich) datatype is a reusable piece of datalogic. Usually at this level the graphical Uniform Modelling Language (UML) is used. This is the kind of model this github is concerned with.
 
 3. Technical model
 
-The technical model is used to generate a database or a schema to automatically validate the data. It will be implementation dependent, but different implementations can stay in sync because substantial parts, at least the fields, can be generated from the logical model.
+   The technical model is used to generate a database or a schema to automatically validate the data. It will be implementation dependent, but different implementations can stay in sync because substantial parts, at least the fields, can be generated from the logical model.
 
 _model in Linked Data_
 
