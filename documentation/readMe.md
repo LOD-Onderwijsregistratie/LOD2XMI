@@ -1,5 +1,8 @@
 #  Documentation
 
+
+__Datamodelling__
+
 Like the MIM model (see: https://github.com/Geonovum/MIM-Werkomgeving) a modeldriven approach is followed.
 
 ![](https://github.com/LOD-Onderwijsregistratie/RDF2XMI2UML/blob/master/documentation/figuur04.JPG "datamodelling")
@@ -18,17 +21,21 @@ It consists of the three classical kinds of models:
 
    The technical model is used to generate a database or a schema to automatically validate the data. It will be implementation dependent, but different implementations can stay in sync because substantial parts, at least the fields, can be generated from the logical model.
 
-_model in Linked Data_
+__Datamodel in Linked Data__
 
-To express a logical model in Linked Data  OWL and SHACL (prefix owl: and sh: respectively) play an important part. OWL defines basic datatyping with classes and properties and possibly Description Logic, although we haven't ventured there yet. SHACL is a  language that expresses the same constraints as UML. It is crucial to explain that OWL-elements cannot have different versions because a modelchange would then also mean replacing datatriples. When modelelements change this will be expressend using SHACL-elements. Together they provide a full description that of the logical model.
+To express a logical model the Linked Data languages  __OWL and SHACL__ (prefix owl: and sh: respectively) play an important part. OWL defines basic datatyping with classes and properties and possibly Description Logic, although we haven't ventured there yet. SHACL is a  language that expresses the same constraints as UML with so called shapes. It is crucial to explain that OWL-elements cannot have different versions. That would be an antipattern because then a modelchange can only be perform3d by changing datatriples. When modelelements change this will be expressed in a different version of a SHACL-shape. Together, OWL and SHACL provide a full description that of the logical model.
 
-_canonical or specific?_
+__Canonical and specific datamodels__
 
 Modelelements are made re-usable by submitting them into a canonical datamodel (cdm) and using them as (rich) datatypes in specific datamodels (sdm).
 
 ![](https://github.com/LOD-Onderwijsregistratie/RDF2XMI2UML/blob/master/documentation/figuur05.JPG "canonical or specific")
 
-etc.
+Constraints or integrityrules defined in the shapes. Nodeshapes define the properties that a class can have and the propertyshapes defines more sofisticated constraints like core datatypes, minimum and maximum length, regular expresssions, enumerationlists and cardinality. This is similar to the XML Schema Definition (XSD) language for datatraffic.
+
+The propertyshaps in a specific datamodel are derived from (a specialisation of) a canonical propertyshape.  This is the way to express a rich datatype taht is re-used in any contexts. Only the cardinality, the minimum and/or maximum number of occurences is locally defined.
+
+
 
 
 
