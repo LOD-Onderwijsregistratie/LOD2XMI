@@ -23,7 +23,7 @@ It consists of the three classical kinds of models:
 
 __Datamodel in Linked Data__
 
-To express a logical model the Linked Data languages  __OWL and SHACL__ (prefix owl: and sh: respectively) play an important part. OWL defines basic datatyping with classes and properties and possibly Description Logic, although we haven't ventured there yet. SHACL is a  language that expresses the same constraints as UML with so called shapes. It is crucial to explain that OWL-elements cannot have different versions. That would be an antipattern because then a modelchange can only be perform3d by changing datatriples. When modelelements change this will be expressed in a different version of a SHACL-shape. Together, OWL and SHACL provide a full description of the logical model.
+To express a logical model the Linked Data languages  __OWL and SHACL__ (prefix owl: and sh: respectively) play an important part. OWL defines basic datatyping with classes and properties and possibly Description Logic, although we haven't ventured there yet. SHACL is a  language that expresses the same constraints as UML with so called shapes. It is crucial to explain that OWL-elements cannot have different versions. That would be an antipattern because then a modelchange can only be realized by migrating the linked data. So, when modelelements change this will be expressed in a different version of a SHACL-shape. Together, OWL and SHACL provide a full description of the logical model.
 
 __Canonical and specific datamodels__
 
