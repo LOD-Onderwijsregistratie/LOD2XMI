@@ -6,7 +6,7 @@ These stylesheets are tested with the data-examples in https://github.com/LOD-On
 
 * rdf2html-v04.xslt  
 
-   This stylesheet picks-out the major modelelements in the input-file en transforms these into a basis HTML-page. This is meant as a prototype for the following.
+   This stylesheet picks-out the major modelelements in the input-file en transforms these into a basic HTML-page. This is meant as a prototype for the following:
 
 * rdf2xml-basic-v05.xslt
 
