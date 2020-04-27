@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- UML Namespace -->
+<!-- W3C Schema created with XMLSpy v2020 rel. 2 (x64) (http://www.altova.com) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:UML="http://schema.omg.org/spec/UML/2.5.1" targetNamespace="http://schema.omg.org/spec/UML/2.5.1">
+	<xs:element name="Association">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UML:Association.connection"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="xmi.id" type="xs:anyURI" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Association.connection">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UML:AssociationEnd" maxOccurs="2"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AssociationEnd">
+		<xs:complexType>
+			<xs:attribute name="multiplicity" type="xs:string"/>
+			<xs:attribute name="type" type="xs:anyURI" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Attribute">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UML:ModelElement.taggedValue" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="xmi.id" type="xs:anyURI" use="required"/>
+			<xs:attribute name="type" type="xs:anyURI"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Class">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UML:ModelElement.taggedValue"/>
+				<xs:element ref="UML:Classifier.feature"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="xmi.id" type="xs:anyURI" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Classifier.feature">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UML:Attribute" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DataType">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UML:ModelElement.taggedValue" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string " use="required"/>
+			<xs:attribute name="xmi.id" type="xs:anyURI" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Enumeration">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UML:ModelElement.taggedValue"/>
+				<xs:element ref="UML:Classifier.feature"/>
+			</xs:sequence>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+			<xs:attribute name="xmi.id" type="xs:anyURI" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Generalization">
+		<xs:complexType>
+			<xs:attribute name="subtype" type="xs:anyURI" use="required"/>
+			<xs:attribute name="supertype" type="xs:anyURI" use="required"/>
+			<xs:attribute name="xmi.id" type="xs:anyURI" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Model">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UML:Namespace.ownedElement"/>
+			</xs:sequence>
+			<xs:attribute name="xmi.id" type="xs:anyURI" use="required"/>
+			<xs:attribute name="name" type="xs:anyURI" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ModelElement.taggedValue">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UML:TaggedValue" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Namespace.ownedElement">
+		<xs:complexType>
+			<xs:choice>
+				<xs:sequence>
+					<xs:sequence minOccurs="0">
+						<xs:sequence maxOccurs="unbounded">
+							<xs:choice>
+								<xs:element ref="UML:DataType"/>
+								<xs:element ref="UML:Enumeration"/>
+							</xs:choice>
+							<xs:element ref="UML:Generalization" minOccurs="0" maxOccurs="3"/>
+						</xs:sequence>
+					</xs:sequence>
+				</xs:sequence>
+				<xs:sequence>
+					<xs:sequence maxOccurs="unbounded">
+						<xs:element ref="UML:Class"/>
+						<xs:element ref="UML:Generalization" minOccurs="0" maxOccurs="3"/>
+						<xs:element ref="UML:Association" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:sequence>
+				<xs:element ref="UML:Package" maxOccurs="unbounded"/>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Package">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="UML:Namespace.ownedElement"/>
+			</xs:sequence>
+			<xs:attribute name="xmi.id" type="xs:anyURI" use="required"/>
+			<xs:attribute name="name" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TaggedValue">
+		<xs:complexType>
+			<xs:attribute name="tag" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="endDate"/>
+						<xs:enumeration value="lowerBound"/>
+						<xs:enumeration value="maxLength"/>
+						<xs:enumeration value="minLength"/>
+						<xs:enumeration value="pattern"/>
+						<xs:enumeration value="rdfType"/>
+						<xs:enumeration value="replacedBy"/>
+						<xs:enumeration value="upperBound"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="xmi.id" type="xs:anyURI"/>
+			<xs:attribute name="value" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
