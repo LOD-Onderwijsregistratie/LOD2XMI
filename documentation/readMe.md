@@ -23,7 +23,7 @@ It consists of the three classical kinds of models:
 
 __Datamodel in Linked Data__
 
-To express a logical model the Linked Data languages  __OWL and SHACL__ (prefix owl: and sh: respectively) play an important part. OWL defines basic datatyping with classes and properties and possibly Description Logic, although we haven't ventured there yet. SHACL is a  language that expresses the same constraints as UML with so called shapes. It is crucial to explain that OWL-elements cannot have different versions. That would be an antipattern because then a modelchange can only be perform3d by changing datatriples. When modelelements change this will be expressed in a different version of a SHACL-shape. Together, OWL and SHACL provide a full description that of the logical model.
+To express a logical model the Linked Data languages  __OWL and SHACL__ (prefix owl: and sh: respectively) play an important part. OWL defines basic datatyping with classes and properties and possibly Description Logic, although we haven't ventured there yet. SHACL is a  language that expresses the same constraints as UML with so called shapes. It is crucial to explain that OWL-elements cannot have different versions. That would be an antipattern because then a modelchange can only be perform3d by changing datatriples. When modelelements change this will be expressed in a different version of a SHACL-shape. Together, OWL and SHACL provide a full description of the logical model.
 
 __Canonical and specific datamodels__
 
@@ -33,10 +33,7 @@ Modelelements are made re-usable by submitting them into a canonical datamodel (
 
 Constraints or integrityrules defined in the shapes. Nodeshapes define the properties that a class can have and the propertyshapes defines more sofisticated constraints like core datatypes, minimum and maximum length, regular expresssions, enumerationlists and cardinality. This is similar to the XML Schema Definition (XSD) language for datatraffic.
 
-The propertyshaps in a specific datamodel are derived from (a specialisation of) a canonical propertyshape.  This is the way to express a rich datatype taht is re-used in any contexts. Only the cardinality, the minimum and/or maximum number of occurences is locally defined.
-
-
-
+The propertyshaps in a specific datamodel are derived from (a specialisation of) a canonical propertyshape.  In this picture denoted by an atrow with a hollow point. This is a way to express a rich datatype that can be re-used in many contexts. Only the cardinality, the minimum and/or maximum number of occurences is locally defined.
 
 
 
