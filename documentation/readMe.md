@@ -33,7 +33,7 @@ Modelelements are made re-usable by submitting them into a canonical datamodel (
 
 Constraints or integrityrules defined in the shapes. Nodeshapes define the properties that a class can have and the propertyshapes defines more sofisticated constraints like core datatypes, minimum and maximum length, regular expresssions, enumerationlists and cardinality. This is similar to the XML Schema Definition (XSD) language for datatraffic.
 
-The propertyshaps in a specific datamodel are derived from (a specialisation of) a canonical propertyshape.  In this picture denoted by an atrow with a hollow point. This is a way to express a rich datatype that can be re-used in many contexts. Only the cardinality, the minimum and/or maximum number of occurences is locally defined.
+The propertyshaps in a specific datamodel are derived from (a specialisation of) a canonical propertyshape.  In this picture denoted by an atrow with a hollow point. This is a way to express a rich datatype that can be re-used in many contexts. Only the cardinality, the minimum and/or maximum number of occurences, is locally defined.
 
 
 
