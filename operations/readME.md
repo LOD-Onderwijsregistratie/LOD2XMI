@@ -7,11 +7,11 @@ But thats is not the end of it.  A matter to consider here is how to transmit ch
 
 1. Import the entire model again with changes
 
-  Right now this doens't look like a viable option.  Platforms usually have an internal identification scheme for modelelements and it is rather common to discard a provided external identification scheme like the linked data URI's the  strong world-wide candidate for such a thing, the linked URI's.
+   Right now this doens't look like a viable option.  Platforms usually have an internal identification scheme for modelelements and it is rather common to discard a provided external identification scheme like the linked data URI's the  strong world-wide candidate for such a thing, the linked URI's.
  
  2. Use XMI.differences
   
-  XMI has in in built-in definition for transmitting changes on existing models: adding, deleting and changing. This is meant to synchronize models over different platforms. See for details: https://www.omg.org/spec/XMI/2.5.1/PDF.  Support form platforms is missing and sofar it couldn't be made operational anywhere.
+   XMI has in in built-in definition for transmitting changes on existing models: adding, deleting and changing. This is meant to synchronize models over different platforms. See for details: https://www.omg.org/spec/XMI/2.5.1/PDF.  Support form platforms is missing and sofar it couldn't be made operational anywhere.
 
 3. Plug in on toolspecific merging facilities
 
