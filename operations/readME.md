@@ -1,7 +1,7 @@
 ## Operations
 
 
-The ambition here is to make models and there elements published as linked data re-usable in different platforms for the development of data traffic and storage. First of all this we need to define an platform independent interface for importing an entire model. This can be achieved with a relatively simple XMI-profile.  At the time of writing this is s good as ready including assurance that changes in de model do not propagate in derived systems without their owners being aware. For that purpose modelelements can be published in different versions. 
+The ambition here is to make models and there elements published as linked data re-usable in different platforms for the development of data traffic and storage. First of all this we need to define an platform independent interface for importing an entire model. This can be achieved with a relatively simple XMI-profile.  At the time of writing this is as good as ready including assurance that changes in de model do not propagate in derived systems without their owners being aware. For that purpose modelelements can be published in different versions. 
 
 But thats is not the end of it.  A matter to consider here is how to transmit changes on existing models. So far we look at three options:
 
