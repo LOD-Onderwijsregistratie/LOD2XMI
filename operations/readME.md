@@ -11,7 +11,7 @@ But thats is not the end of it.  A matter to consider here is how to transmit ch
  
  2. Use XMI.differences
   
-   XMI has in in built-in definition for transmitting changes on existing models: adding, deleting and changing. This is meant to synchronize models over different platforms. See for details: https://www.omg.org/spec/XMI/2.5.1/PDF.  Support form platforms is missing and sofar it couldn't be made operational anywhere.
+    XMI has in in built-in definition for transmitting changes on existing models: adding, deleting and changing. This is meant to synchronize models over different platforms. See for details: https://www.omg.org/spec/XMI/2.5.1/PDF.  Support form platforms is missing and sofar it couldn't be made operational anywhere.
 
 3. Plug in on toolspecific merging facilities
 
