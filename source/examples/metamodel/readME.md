@@ -31,7 +31,7 @@ What follows is a description of the rdf constructions used to descibe a M1-mode
 
   An enumeration is also a datatype at a national level that is made available for re-use without the need to copy it or define it again. 
 
-![](https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/source/examples/metamodel/figuur09.JPG "figure 9.  Enumeration )
+![](https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/source/examples/metamodel/figuur09.JPG "figure 9.  Enumeration" )
 
   This represents a MIM-enumeration. It is defined as a limited list of possible values. 
 
@@ -40,7 +40,7 @@ What follows is a description of the rdf constructions used to descibe a M1-mode
 
   A MIM-Class, MIM-Associations and MIM-Generalizations are constructed as follows:
 
-![](https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/source/examples/metamodel/figuur10.JPG "figure 10.  Classes)
+![](https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/source/examples/metamodel/figuur10.JPG "figure 10.  Classes")
 
   A class has attributes which are classified by a canonical rich datatype or an enumeration.
 
