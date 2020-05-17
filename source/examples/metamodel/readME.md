@@ -1,4 +1,4 @@
-## Model of model of model
+## Model of a model of a model
 
 
 Object Management Group (OMG) defines four layers relevant voor modeldrive engineering. Next figure is copied from the Metamodel Informationmodelling (MIM).
