@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<Class rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Onderwijsaanbieder" xmlns="http://www.w3.org/2002/07/owl#">
+		<label xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">Onderwijsaanbieder</label>
+		<comment xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">Een organisatie die door een onderwijsbestuur is ingesteld voor het verzorgen van onderwijs.</comment>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class">
+		</rdf:type>
+		<isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</isDefinedBy>
+		<subClassOf rdf:resource="http://lod.onderwijsregistratie.nl/cat/rio/def/Organisatie" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</subClassOf>
+		<subject rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/term/Onderwijsaanbieder" xmlns="http://purl.org/dc/terms/">
+		</subject>
+	</Class>
+	<rdf:Description rdf:nodeID="bnodecfe825b6ee7d2d90">
+		<rdf:first rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/OPB">
+		</rdf:first>
+		<rdf:rest rdf:nodeID="bnodecfe825b6ed90e1e9">
+		</rdf:rest>
+	</rdf:Description>
+	<PropertyShape rdf:about="http://lod.onderwijsregistratie.nl/cat/cdm/sh/organisatienaam" xmlns="http://www.w3.org/ns/shacl#">
+		<maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</maxLength>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape">
+		</rdf:type>
+		<nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal">
+		</nodeKind>
+		<datatype rdf:resource="http://www.w3.org/2001/XMLSchema#token">
+		</datatype>
+		<path rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/organisatienaam">
+		</path>
+	</PropertyShape>
+	<NodeShape rdf:about="http://lod.onderwijsregistratie.nl/cat/cdm/sh/Denominatie-v04" xmlns="http://www.w3.org/ns/shacl#">
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape">
+		</rdf:type>
+		<targetClass rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie">
+		</targetClass>
+		<in rdf:nodeID="bnodecfe825b6eca49642">
+		</in>
+	</NodeShape>
+	<NamedIndividual rdf:about="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/RK" xmlns="http://www.w3.org/2002/07/owl#">
+		<comment xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">Rooms-Katholiek</comment>
+		<label xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">RK</label>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual">
+		</rdf:type>
+		<rdf:type rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie">
+		</rdf:type>
+	</NamedIndividual>
+	<NamedIndividual rdf:about="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/OPB" xmlns="http://www.w3.org/2002/07/owl#">
+		<comment xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">Openbaar</comment>
+		<label xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">OPB</label>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual">
+		</rdf:type>
+		<rdf:type rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie">
+		</rdf:type>
+	</NamedIndividual>
+	<NodeShape rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/sh/Denominatie" xmlns="http://www.w3.org/ns/shacl#">
+		<name xml:lang="nl">Denominatie</name>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape">
+		</rdf:type>
+		<isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</isDefinedBy>
+		<subClassOf rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/sh/Denominatie-v04" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</subClassOf>
+		<targetClass rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie">
+		</targetClass>
+		<in rdf:nodeID="bnodecfe825b6eacbfef4">
+		</in>
+	</NodeShape>
+	<DatatypeProperty rdf:about="http://lod.onderwijsregistratie.nl/cat/cdm/def/postcode" xmlns="http://www.w3.org/2002/07/owl#">
+		<label xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">postcode</label>
+		<comment xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">De door de Post NL vastgestelde code behorend bij de straatnaam en het huisnummer dan wel de door Post NL vastgestelde code behorende bij een bepaalde combinatie van een naam openbare ruimte en een huisnummer.</comment>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty">
+		</rdf:type>
+		<subject rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/term/Postcode" xmlns="http://purl.org/dc/terms/">
+		</subject>
+	</DatatypeProperty>
+	<NodeShape rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder" xmlns="http://www.w3.org/ns/shacl#">
+		<closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</closed>
+		<name xml:lang="nl">Onderwijsaanbieder</name>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape">
+		</rdf:type>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/type">
+		</property>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/label">
+		</property>
+		<isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</isDefinedBy>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder/postcode">
+		</property>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder/denominatie">
+		</property>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder/biedtAan">
+		</property>
+		<targetClass rdf:resource="http://lod.onderwijsregistratie.nl/cat/rio/def/Onderwijsaanbieder">
+		</targetClass>
+	</NodeShape>
+	<NodeShape rdf:about="http://lod.onderwijsregistratie.nl/cat/cdm/sh/placeholder" xmlns="http://www.w3.org/ns/shacl#">
+		<name xml:lang="nl">{placeholder}</name>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape">
+		</rdf:type>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/sh/postcode-v02">
+		</property>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/sh/postcode-v01">
+		</property>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/sh/organisatienaam">
+		</property>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/sh/denominatie-v04">
+		</property>
+	</NodeShape>
+	<rdf:Description rdf:nodeID="bnodecfe825b6ed90e1e9">
+		<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil">
+		</rdf:rest>
+		<rdf:first rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/RK">
+		</rdf:first>
+	</rdf:Description>
+	<PropertyShape rdf:about="http://lod.onderwijsregistratie.nl/cat/cdm/sh/denominatie-v04" xmlns="http://www.w3.org/ns/shacl#">
+		<minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</minLength>
+		<maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</maxLength>
+		<pattern rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[A-Z0-9_]*</pattern>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape">
+		</rdf:type>
+		<nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI">
+		</nodeKind>
+		<datatype rdf:resource="http://www.w3.org/2001/XMLSchema#token">
+		</datatype>
+		<node rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/sh/Denominatie-v04">
+		</node>
+		<path rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/denominatie">
+		</path>
+	</PropertyShape>
+	<rdf:Description rdf:nodeID="bnodecfe825b6ebb84a9b">
+		<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil">
+		</rdf:rest>
+		<rdf:first rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/RK">
+		</rdf:first>
+	</rdf:Description>
+	<rdf:Description rdf:nodeID="bnodecfe825b6e9dfb34d">
+		<rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil">
+		</rdf:rest>
+		<rdf:first rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/RK">
+		</rdf:first>
+	</rdf:Description>
+	<PropertyShape rdf:about="http://lod.onderwijsregistratie.nl/type" xmlns="http://www.w3.org/ns/shacl#">
+		<name xml:lang="nl">type</name>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape">
+		</rdf:type>
+		<nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI">
+		</nodeKind>
+		<path rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type">
+		</path>
+	</PropertyShape>
+	<Class rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding" xmlns="http://www.w3.org/2002/07/owl#">
+		<label xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">Opleiding</label>
+		<comment xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">Is het geheel van bekwaamheden die een afgestudeerde kwalificeren voor het functionerenmin een beroep of vervolgopleiding.</comment>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class">
+		</rdf:type>
+		<isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</isDefinedBy>
+		<subject rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/term/Opleiding" xmlns="http://purl.org/dc/terms/">
+		</subject>
+	</Class>
+	<rdf:Description rdf:nodeID="bnodecfe825b6eacbfef4">
+		<rdf:first rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/OPB">
+		</rdf:first>
+		<rdf:rest rdf:nodeID="bnodecfe825b6e9dfb34d">
+		</rdf:rest>
+	</rdf:Description>
+	<Class rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Organisatie" xmlns="http://www.w3.org/2002/07/owl#">
+		<label xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">Organisatie</label>
+		<comment xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">Is een groep personen met een bepaald doel of een bepaalde functie</comment>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class">
+		</rdf:type>
+		<isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</isDefinedBy>
+	</Class>
+	<PropertyShape rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/sh/Organisatie/organisatienaam" xmlns="http://www.w3.org/ns/shacl#">
+		<maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</maxLength>
+		<minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+		<maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+		<name xml:lang="nl">naam</name>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape">
+		</rdf:type>
+		<nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal">
+		</nodeKind>
+		<datatype rdf:resource="http://www.w3.org/2001/XMLSchema#token">
+		</datatype>
+		<isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</isDefinedBy>
+		<subClassOf rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/sh/organisatienaam" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</subClassOf>
+		<path rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/organisatienaam">
+		</path>
+	</PropertyShape>
+	<Class rdf:about="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie" xmlns="http://www.w3.org/2002/07/owl#">
+		<label xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">Denominatie</label>
+		<comment xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">De levensbeschouwing of godsdienst die een organisatie uitdraagt..</comment>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class">
+		</rdf:type>
+		<subject rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/term/Denominatie" xmlns="http://purl.org/dc/terms/">
+		</subject>
+		<oneOf rdf:nodeID="bnodecfe825b6ee7d2d90">
+		</oneOf>
+	</Class>
+	<NodeShape rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/sh/Organisatie" xmlns="http://www.w3.org/ns/shacl#">
+		<closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</closed>
+		<name xml:lang="nl">Organisatie</name>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape">
+		</rdf:type>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/type">
+		</property>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/label">
+		</property>
+		<isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</isDefinedBy>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/cat/rio/sh/Organisatie/postcode">
+		</property>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/cat/rio/sh/Organisatie/organisatienaam">
+		</property>
+		<targetClass rdf:resource="http://lod.onderwijsregistratie.nl/cat/rio/def/Organisatie">
+		</targetClass>
+	</NodeShape>
+	<NodeShape rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/sh/Opleiding" xmlns="http://www.w3.org/ns/shacl#">
+		<closed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</closed>
+		<name xml:lang="nl">Opleiding</name>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#NodeShape">
+		</rdf:type>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/type">
+		</property>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/label">
+		</property>
+		<isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</isDefinedBy>
+		<property rdf:resource="http://lod.onderwijsregistratie.nl/cat/rio/sh/Opleiding/denominatie">
+		</property>
+		<targetClass rdf:resource="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
+		</targetClass>
+	</NodeShape>
+	<DatatypeProperty rdf:about="http://lod.onderwijsregistratie.nl/cat/cdm/def/organisatienaam" xmlns="http://www.w3.org/2002/07/owl#">
+		<label xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">organisatienaam</label>
+		<comment xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">De naam van een organisatie</comment>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty">
+		</rdf:type>
+	</DatatypeProperty>
+	<Ontology rdf:about="http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio" xmlns="http://www.w3.org/2002/07/owl#">
+		<modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date" xmlns="http://purl.org/dc/terms/">2019-05-13</modified>
+		<title xml:lang="nl" xmlns="http://purl.org/dc/terms/">Ontologie Registratie Instellingen en Opleidingen</title>
+		<versionInfo xml:lang="nl">Aangemaakt op 2019-05-13 17:50:55 op basis van commit 115.</versionInfo>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology">
+		</rdf:type>
+	</Ontology>
+	<PropertyShape rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder/biedtAan" xmlns="http://www.w3.org/ns/shacl#">
+		<maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</maxCount>
+		<minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+		<name xml:lang="nl">biedt aan</name>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape">
+		</rdf:type>
+		<nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI">
+		</nodeKind>
+		<isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</isDefinedBy>
+		<path rdf:resource="http://lod.onderwijsregistratie.nl/cat/rio/def/biedtAan">
+		</path>
+		<class rdf:resource="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
+		</class>
+	</PropertyShape>
+	<PropertyShape rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/sh/Opleiding/denominatie" xmlns="http://www.w3.org/ns/shacl#">
+		<maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</maxCount>
+		<minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</minCount>
+		<name xml:lang="nl">denominatie</name>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape">
+		</rdf:type>
+		<nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI">
+		</nodeKind>
+		<isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</isDefinedBy>
+		<node rdf:resource="http://lod.onderwijsregistratie.nl/cat/rio/sh/Denominatie">
+		</node>
+		<path rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/denominatie">
+		</path>
+	</PropertyShape>
+	<PropertyShape rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder/denominatie" xmlns="http://www.w3.org/ns/shacl#">
+		<name xml:lang="nl">denominatie</name>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape">
+		</rdf:type>
+		<nodeKind rdf:resource="http://www.w3.org/ns/shacl#IRI">
+		</nodeKind>
+		<isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</isDefinedBy>
+		<node rdf:resource="http://lod.onderwijsregistratie.nl/cat/rio/sh/Denominatie">
+		</node>
+		<path rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/denominatie">
+		</path>
+	</PropertyShape>
+	<PropertyShape rdf:about="http://lod.onderwijsregistratie.nl/cat/cdm/sh/postcode-v01" xmlns="http://www.w3.org/ns/shacl#">
+		<endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date" xmlns="http://schema.org/">2019-04-03</endDate>
+		<minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</minLength>
+		<maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</maxLength>
+		<pattern rdf:datatype="http://www.w3.org/2001/XMLSchema#string">([1-9]{1}[0-9]{3}[A-Z]{2})</pattern>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape">
+		</rdf:type>
+		<nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal">
+		</nodeKind>
+		<datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string">
+		</datatype>
+		<isReplacedBy rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/sh/postcode-v02" xmlns="http://purl.org/dc/terms/">
+		</isReplacedBy>
+		<path rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/postcode">
+		</path>
+	</PropertyShape>
+	<ObjectProperty rdf:about="http://lod.onderwijsregistratie.nl/cat/cdm/def/denominatie" xmlns="http://www.w3.org/2002/07/owl#">
+		<label xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">denominatie</label>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty">
+		</rdf:type>
+		<range rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</range>
+	</ObjectProperty>
+	<rdf:Description rdf:nodeID="bnodecfe825b6eca49642">
+		<rdf:first rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/OPB">
+		</rdf:first>
+		<rdf:rest rdf:nodeID="bnodecfe825b6ebb84a9b">
+		</rdf:rest>
+	</rdf:Description>
+	<PropertyShape rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder/postcode" xmlns="http://www.w3.org/ns/shacl#">
+		<minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</minLength>
+		<maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</maxLength>
+		<minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+		<maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+		<name xml:lang="nl">postcode</name>
+		<pattern rdf:datatype="http://www.w3.org/2001/XMLSchema#string">([1-9]{1}[0-9]{3}[A-Z]{2})</pattern>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape">
+		</rdf:type>
+		<nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal">
+		</nodeKind>
+		<datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string">
+		</datatype>
+		<isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</isDefinedBy>
+		<subClassOf rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/sh/postcode-v01" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</subClassOf>
+		<path rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/postcode">
+		</path>
+	</PropertyShape>
+	<PropertyShape rdf:about="http://lod.onderwijsregistratie.nl/cat/cdm/sh/postcode-v02" xmlns="http://www.w3.org/ns/shacl#">
+		<minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</minLength>
+		<maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</maxLength>
+		<pattern rdf:datatype="http://www.w3.org/2001/XMLSchema#string">([1-9]{1}[0-9]{3}[A-Z]{2})2x</pattern>
+		<pattern rdf:datatype="http://www.w3.org/2001/XMLSchema#string">([1-9]{1}[0-9]{3}[A-Z]{2})</pattern>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape">
+		</rdf:type>
+		<nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal">
+		</nodeKind>
+		<datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string">
+		</datatype>
+		<path rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/postcode">
+		</path>
+	</PropertyShape>
+	<ObjectProperty rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/biedtAan" xmlns="http://www.w3.org/2002/07/owl#">
+		<label xml:lang="nl" xmlns="http://www.w3.org/2000/01/rdf-schema#">biedtAan</label>
+		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty">
+		</rdf:type>
+		<isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</isDefinedBy>
+	</ObjectProperty>
+	<PropertyShape rdf:about="http://lod.onderwijsregistratie.nl/label" xmlns="http://www.w3.org/ns/shacl#">
+		<name xml:lang="nl">label</name>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape">
+		</rdf:type>
+		<nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal">
+		</nodeKind>
+		<path rdf:resource="http://www.w3.org/2000/01/rdf-schema#label">
+		</path>
+	</PropertyShape>
+	<PropertyShape rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/sh/Organisatie/postcode" xmlns="http://www.w3.org/ns/shacl#">
+		<minLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</minLength>
+		<maxLength rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</maxLength>
+		<minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</minCount>
+		<maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maxCount>
+		<name xml:lang="nl">postcode</name>
+		<pattern rdf:datatype="http://www.w3.org/2001/XMLSchema#string">([1-9]{1}[0-9]{3}[A-Z]{2})</pattern>
+		<rdf:type rdf:resource="http://www.w3.org/ns/shacl#PropertyShape">
+		</rdf:type>
+		<nodeKind rdf:resource="http://www.w3.org/ns/shacl#Literal">
+		</nodeKind>
+		<datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string">
+		</datatype>
+		<isDefinedBy rdf:resource="http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</isDefinedBy>
+		<subClassOf rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/sh/postcode-v01" xmlns="http://www.w3.org/2000/01/rdf-schema#">
+		</subClassOf>
+		<path rdf:resource="http://lod.onderwijsregistratie.nl/cat/cdm/def/postcode">
+		</path>
+	</PropertyShape>
+</rdf:RDF>
