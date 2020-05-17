@@ -1,6 +1,6 @@
 # Data-examples
 
-This directory contains  a small imaginary data example, from the RIO world (Register Instellingen en Opleiding = Registry for Schools and Education in the Netherlands). It is spiked with canonical rich datatypes including a bit of versioning.
+This directory contains  a small imaginary model example (M1 in terms of the 4 -layers by OMG). It is spiked with rich datatypes including a bit of versioning.
 
 The original is a Turtle-file (see subdirectory).  This is transformed into rdf/xml because that is what XSLT acts upon. However, 
 there seem to be major differences to express linked datacontent with rdf/xml:
@@ -31,7 +31,7 @@ The originally Turtle is  transformed into  rdf/xml  with an open conversion too
 
 In this case the Turtle was loaded into the Open Link triple store Virtuoso (open source 07.20.3229) and exported again through the sparql endpoint with a CONSTRUCT-query with the result serialized as rdf/xml.
 
-* RIO-versioned-marklogic.rdf (to do)
+* RIO-versioned-marklogic.rdf
 
 In this case the Turtle was loaded into a MarkLogic Server 10.0-2.1 (free developer license) and exported through the qconsole with a CONSTRUCT-query and  serialized in rdf/xml form.
 
