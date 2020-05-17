@@ -25,7 +25,7 @@ These formats are both valid and express the same content. This difference is im
 
 * RIO-versioned-easyrdf.rdf
 
-  The originally Turtle is  transformed into  rdf/xml  with an open conversion tool: http://www.easyrdf.org/converter. 
+  The original Turtle is transformed into  rdf/xml  with an open conversion tool: http://www.easyrdf.org/converter. 
 
 * RIO-versioned-virtuoso.rdf
 
