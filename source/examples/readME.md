@@ -39,4 +39,16 @@ In this case the Turtle was loaded into a MarkLogic Server 10.0-2.1 (free develo
 
 In this case the Turtle was loaded into an implementation of  open source Eclips RDF4J (formerly OpenRDF Sesame) and exported through the sparql endpoint with a CONSTRUCT-query in rdf/xml form.
 
+These files, although technically different, should lead to the same transformation result.
+
+
+__notes:__
+1.  The propertyshape for an enumeration has nodeKind IRI en still has a datatype en other constraints. This is because the enumerationlijst can not be used in every context. In those cases datatype and constraints are plan B.
+2.   There must be clear way tot determine whether whether an element is canonical or specific. For now the presence of an 
+rdfs:isDefinedBy is used to indicate that it is specific.
+
+
+
+
+
 
