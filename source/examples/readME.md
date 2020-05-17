@@ -23,10 +23,9 @@ there seem to be major differences to express linked datacontent with rdf/xml:
 
 These formats are both valid and express the same content. This difference is important for a XSLT transformation.  We cannot simply choose one, so we have to check different platforms:
 
-* RIO-sync-easyrdf.rdf
+* RIO-versioned-easyrdf.rdf
 
-This is originally serialized als Turtle and transformed into  rdf/xml  with an open convertor: 
-http://www.easyrdf.org/converter. 
+The originally Turtle is  transformed into  rdf/xml  with an open conversion tool: http://www.easyrdf.org/converter. 
 
 * RIO-sync-virtuoso.rdf
 
