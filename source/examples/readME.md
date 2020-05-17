@@ -27,15 +27,15 @@ These formats are both valid and express the same content. This difference is im
 
 The originally Turtle is  transformed into  rdf/xml  with an open conversion tool: http://www.easyrdf.org/converter. 
 
-* RIO-sync-virtuoso.rdf
+* RIO-versioned-virtuoso.rdf
 
-In this case the Turtle was loaded into the Open Link triple store Virtuoso (open source 07.20.3229) and exported again through the sparql endpoint with a basic CONSTRUCT-query in rdf/xml form.
+In this case the Turtle was loaded into the Open Link triple store Virtuoso (open source 07.20.3229) and exported again through the sparql endpoint with a CONSTRUCT-query with the result serialiezed as rdf/xml.
 
-* RIO-sync-marklogic.rdf
+* RIO-versioned-marklogic.rdf (to do)
 
 In this case the Turtle was loaded into a MarkLogic Server 10.0-2.1 (free developer license) and exported through the qconsole with a CONSTRUCT-query and  serizalized in rdf/xml form.
 
-* RIO-sync-rdf4j.rdf  (to do)
+* RIO-versioned-rdf4j.rdf  (to do)
 
 In this case the Turtle was loaded into an implementation of  open source Eclips RDF4J (formerly OpenRDF Sesame) and exported through the sparql endpoint with a basic CONSTRUCT-query in rdf/xml form.
 
