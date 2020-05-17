@@ -25,19 +25,19 @@ These formats are both valid and express the same content. This difference is im
 
 * RIO-versioned-easyrdf.rdf
 
-The originally Turtle is  transformed into  rdf/xml  with an open conversion tool: http://www.easyrdf.org/converter. 
+  The originally Turtle is  transformed into  rdf/xml  with an open conversion tool: http://www.easyrdf.org/converter. 
 
 * RIO-versioned-virtuoso.rdf
 
-In this case the Turtle was loaded into the Open Link triple store Virtuoso (open source 07.20.3229) and exported again through the sparql endpoint with a CONSTRUCT-query with the result serialized as rdf/xml.
+  In this case the Turtle was loaded into the Open Link triple store Virtuoso (open source 07.20.3229) and exported again through the sparql endpoint with a CONSTRUCT-query with the result serialized as rdf/xml.
 
 * RIO-versioned-marklogic.rdf
 
-In this case the Turtle was loaded into a MarkLogic Server 10.0-2.1 (free developer license) and exported through the qconsole with a CONSTRUCT-query and  serialized in rdf/xml form.
+  In this case the Turtle was loaded into a MarkLogic Server 10.0-2.1 (free developer license) and exported through the qconsole with a CONSTRUCT-query and  serialized in rdf/xml form.
 
 * RIO-versioned-rdf4j.rdf  (to do)
 
-In this case the Turtle was loaded into an implementation of  open source Eclips RDF4J (formerly OpenRDF Sesame) and exported through the sparql endpoint with a CONSTRUCT-query in rdf/xml form.
+  In this case the Turtle was loaded into an implementation of  open source Eclips RDF4J (formerly OpenRDF Sesame) and exported through the sparql endpoint with a CONSTRUCT-query in rdf/xml form.
 
 These files, although technically different, should lead to the same transformation result.
 
