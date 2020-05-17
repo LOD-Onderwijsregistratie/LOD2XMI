@@ -1,0 +1,347 @@
+@prefix cdm: <http://lod.onderwijsregistratie.nl/cat/cdm/def/> .
+@prefix cdmsh: <http://lod.onderwijsregistratie.nl/cat/cdm/sh/> .
+@prefix riosh: <http://lod.onderwijsregistratie.nl/cat/rio/sh/>.
+@prefix rio: <http://lod.onderwijsregistratie.nl/cat/rio/def/>.
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix term: <http://lod.onderwijsregistratie.nl/cat/cdm/term/> .
+@prefix schema: <http://schema.org/> .
+
+
+<http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio>
+	a owl:Ontology ;
+	dct:title "Ontologie Registratie Instellingen en Opleidingen"@nl ;
+	dct:modified "2019-05-13"^^xsd:date ;
+	owl:versionInfo "Aangemaakt op 2019-05-13 17:50:55 op basis van commit 115."@nl ;
+.
+
+# ==============================================================================================================
+#   GEGEVENSWOORDENBOEK
+# ==============================================================================================================
+
+# --------------------------------------------------------------------------------------------------------------
+#   Gegevenstypen:  CDM DATATYPEPROPERTY/OBJECTPROPERTY
+#   VERSIELOOS
+# --------------------------------------------------------------------------------------------------------------
+
+cdm:organisatienaam
+	rdf:type owl:DatatypeProperty ;
+	rdfs:label "organisatienaam"@nl ;
+	rdfs:comment "De naam van een organisatie"@nl ;
+.
+
+cdm:postcode
+	rdf:type owl:DatatypeProperty ;
+	rdfs:label "postcode"@nl ;
+	rdfs:comment "De door de Post NL vastgestelde code behorend bij de straatnaam en het huisnummer dan wel de door Post NL vastgestelde code behorende bij een bepaalde combinatie van een naam openbare ruimte en een huisnummer."@nl ;
+	dct:subject term:Postcode ;
+.
+
+# - - - - De EG met enumeratie(s): cdm:denominatie
+cdm:denominatie
+	rdfs:label "denominatie"@nl ; 
+	rdf:type owl:ObjectProperty ;
+	rdfs:range <http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie>;
+.
+
+# - - - - De enumeratie: cdm:Denominatie [EG = denominatie]
+<http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie>
+	rdf:type owl:Class ;
+	rdfs:label "Denominatie"@nl ;
+	dct:subject term:Denominatie ;
+	rdfs:comment "De levensbeschouwing of godsdienst die een organisatie uitdraagt.."@nl ;
+	owl:oneOf (
+		<http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/OPB>
+		<http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/RK>
+	) ;
+.
+# - - - - De literals onder enumeratie: cdm:Denominatie
+<http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/OPB>
+	rdf:type <http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie> ;
+	rdf:type owl:NamedIndividual ;
+	rdfs:label "OPB"@nl ;
+	rdfs:comment "Openbaar"@nl ;
+.
+<http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/RK>
+	rdf:type <http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie> ;
+	rdf:type owl:NamedIndividual ;
+	rdfs:label "RK"@nl ;
+	rdfs:comment "Rooms-Katholiek"@nl ;
+.
+
+# --------------------------------------------------------------------------------------------------------------
+#   CDM Gegevenstypen: SHAPES
+#   GEVERSIONEERD
+# --------------------------------------------------------------------------------------------------------------
+
+
+# - - - - De SHACL definities van SG: placeholder
+cdmsh:placeholder
+	a sh:NodeShape ;
+	sh:name "{placeholder}"@nl ;
+	sh:property <http://lod.onderwijsregistratie.nl/cat/cdm/sh/organisatienaam> ;
+	sh:property <http://lod.onderwijsregistratie.nl/cat/cdm/sh/postcode-v01> ;
+	sh:property <http://lod.onderwijsregistratie.nl/cat/cdm/sh/postcode-v02> ;
+	sh:property <http://lod.onderwijsregistratie.nl/cat/cdm/sh/denominatie-v04> ;
+.
+
+
+# - - - - De SHACL definities van alle attibuten in SG: cdm:Placeholder
+<http://lod.onderwijsregistratie.nl/cat/cdm/sh/organisatienaam>
+	rdf:type sh:PropertyShape ;
+	sh:nodeKind sh:Literal ;
+	sh:path cdm:organisatienaam ;
+    sh:datatype xsd:token ;
+    sh:maxLength 100 ;
+.
+
+<http://lod.onderwijsregistratie.nl/cat/cdm/sh/postcode-v01>
+	a sh:PropertyShape ;
+	sh:nodeKind sh:Literal ;
+	sh:path cdm:postcode ;
+	dct:isReplacedBy <http://lod.onderwijsregistratie.nl/cat/cdm/sh/postcode-v02> ;
+	schema:endDate "2019-04-03"^^xsd:date;
+	sh:datatype xsd:string ;
+	sh:minLength 6 ;
+	sh:maxLength 6 ;
+	sh:pattern "([1-9]{1}[0-9]{3}[A-Z]{2})" ;
+.
+
+
+<http://lod.onderwijsregistratie.nl/cat/cdm/sh/postcode-v02>
+	a sh:PropertyShape ;
+	sh:nodeKind sh:Literal ;
+	sh:path cdm:postcode ;
+	sh:datatype xsd:string ;
+	sh:minLength 6 ;
+	sh:maxLength 6 ;
+	sh:pattern "([1-9]{1}[0-9]{3}[A-Z]{2})" ;
+	sh:pattern "([1-9]{1}[0-9]{3}[A-Z]{2})2x" ;
+.
+
+
+<http://lod.onderwijsregistratie.nl/cat/cdm/sh/denominatie-v04>
+	a sh:PropertyShape ;
+	sh:nodeKind sh:IRI ;
+	sh:path cdm:denominatie ;
+#	sh:class <http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie> ;
+	sh:node <http://lod.onderwijsregistratie.nl/cat/cdm/sh/Denominatie-v04> ;
+	sh:datatype xsd:token ;
+	sh:minLength 4 ;
+	sh:maxLength 4 ;
+	sh:pattern "[A-Z0-9_]*" ;
+.
+
+# - - - - De SHACL definities van enumeratie: cdm:Denominatie-v04
+<http://lod.onderwijsregistratie.nl/cat/cdm/sh/Denominatie-v04>
+	rdf:type sh:NodeShape ;
+	sh:targetClass <http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie> ;
+	sh:in (
+		<http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/OPB>
+		<http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/RK>
+	) ;
+.
+
+
+# ==============================================================================================================
+#   RIO-MODEL
+# ==============================================================================================================
+
+# --------------------------------------------------------------------------------------------------------------
+#   Algemeen
+# --------------------------------------------------------------------------------------------------------------
+
+	
+<http://lod.onderwijsregistratie.nl/type>
+	a sh:PropertyShape ;
+	sh:name "type"@nl ;
+	sh:nodeKind sh:IRI ;
+	sh:path rdf:type ;
+.
+
+<http://lod.onderwijsregistratie.nl/label>
+	a sh:PropertyShape ;
+	sh:name "label"@nl ;
+	sh:nodeKind sh:Literal ;
+	sh:path rdfs:label ;
+.
+
+	
+# --------------------------------------------------------------------------------------------------------------
+#   Samengesteld Gegevenstype CLASS + NODESHAPE->PROPERTY
+# --------------------------------------------------------------------------------------------------------------
+
+# = = = = Samengestelde Gegevenstype: rio:Onderwijsaanbieder
+rio:Onderwijsaanbieder
+	rdfs:isDefinedBy <http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio> ;
+	rdf:type owl:Class ;
+	rdfs:label "Onderwijsaanbieder"@nl ;
+	rdfs:comment "Een organisatie die door een onderwijsbestuur is ingesteld voor het verzorgen van onderwijs."@nl ;
+	dct:subject term:Onderwijsaanbieder ;
+	rdfs:subClassOf rio:Organisatie ;
+.
+
+# - - - - De SHACL definities van SG: Onderwijsaanbieder
+riosh:Onderwijsaanbieder
+	rdfs:isDefinedBy <http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio> ;
+	a sh:NodeShape ;
+	sh:name "Onderwijsaanbieder"@nl ;
+	sh:targetClass rio:Onderwijsaanbieder ;
+	sh:closed true ;
+	sh:property <http://lod.onderwijsregistratie.nl/type> ;
+	sh:property <http://lod.onderwijsregistratie.nl/label> ;
+	sh:property <http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder/biedtAan> ;
+	sh:property <http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder/postcode> ;
+	sh:property <http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder/denominatie> ;
+.
+# - - - - De SHACL definities van alle attibuten in SG: riosh:Onderwijsaanbieder
+<http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder/biedtAan>
+	rdfs:isDefinedBy <http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio> ;
+	a sh:PropertyShape ;
+	sh:name "biedt aan"@nl ;
+	sh:nodeKind sh:IRI ;
+	sh:path rio:biedtAan ;
+	sh:class rio:Opleiding ;
+	sh:minCount 1 ;
+	sh:maxCount 20;
+.
+
+<http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder/postcode>
+	rdfs:isDefinedBy <http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio> ;
+	a sh:PropertyShape ;
+	rdfs:subClassOf <http://lod.onderwijsregistratie.nl/cat/cdm/sh/postcode-v01> ;
+	sh:name "postcode"@nl ;
+	sh:nodeKind sh:Literal ;
+	sh:path cdm:postcode ;
+	sh:datatype xsd:string ;
+	sh:minLength 6 ;
+	sh:maxLength 6 ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	sh:pattern "([1-9]{1}[0-9]{3}[A-Z]{2})" ;
+.
+
+<http://lod.onderwijsregistratie.nl/cat/rio/sh/Onderwijsaanbieder/denominatie>
+	rdfs:isDefinedBy <http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio> ;
+	a sh:PropertyShape ;
+	sh:name "denominatie"@nl ;
+	sh:nodeKind sh:IRI ;
+	sh:path cdm:denominatie ;
+#	sh:class <http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie> ;
+	sh:node <http://lod.onderwijsregistratie.nl/cat/rio/sh/Denominatie> ;
+.
+
+# = = = = Samengestelde Gegevenstype: rio:Opleiding
+rio:Opleiding
+	rdfs:isDefinedBy <http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio> ;
+	rdf:type owl:Class ;
+	rdfs:label "Opleiding"@nl ;
+	rdfs:comment "Is het geheel van bekwaamheden die een afgestudeerde kwalificeren voor het functionerenmin een beroep of vervolgopleiding."@nl ;
+	dct:subject term:Opleiding;
+.
+
+# - - - - De SHACL definities van SG: Opleiding
+riosh:Opleiding
+	rdfs:isDefinedBy <http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio> ;
+	a sh:NodeShape ;
+	sh:name "Opleiding"@nl ;
+	sh:targetClass rio:Opleiding ;
+	sh:closed true ;
+	sh:property <http://lod.onderwijsregistratie.nl/type> ;
+	sh:property <http://lod.onderwijsregistratie.nl/label> ;
+	sh:property <http://lod.onderwijsregistratie.nl/cat/rio/sh/Opleiding/denominatie> ;
+.
+
+<http://lod.onderwijsregistratie.nl/cat/rio/sh/Opleiding/denominatie>
+	rdfs:isDefinedBy <http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio> ;
+	a sh:PropertyShape ;
+	sh:name "denominatie"@nl ;
+	sh:nodeKind sh:IRI ;
+	sh:path cdm:denominatie ;
+#	sh:class <http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie> ;
+	sh:node <http://lod.onderwijsregistratie.nl/cat/rio/sh/Denominatie> ;
+	sh:minCount 0 ;
+	sh:maxCount 2 ;
+.
+
+
+# = = = = Samengestelde Gegevenstype: cdm:Organisatie
+rio:Organisatie
+	rdfs:isDefinedBy <http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio> ;
+	rdf:type owl:Class ;
+	rdfs:label "Organisatie"@nl ;
+	rdfs:comment "Is een groep personen met een bepaald doel of een bepaalde functie"@nl ;
+.
+# - - - - De SHACL definities van SG: cdm:Organisatie
+riosh:Organisatie
+	rdfs:isDefinedBy <http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio> ;
+	rdf:type sh:NodeShape ;
+	sh:name "Organisatie"@nl ;
+	sh:targetClass rio:Organisatie ;
+	sh:closed true ;
+	sh:property <http://lod.onderwijsregistratie.nl/type> ;
+	sh:property <http://lod.onderwijsregistratie.nl/label> ;
+	sh:property <http://lod.onderwijsregistratie.nl/cat/rio/sh/Organisatie/organisatienaam> ;
+	sh:property <http://lod.onderwijsregistratie.nl/cat/rio/sh/Organisatie/postcode> ;
+.
+# - - - - De SHACL definities van alle attibuten in SG: rio:Organisatie
+<http://lod.onderwijsregistratie.nl/cat/rio/sh/Organisatie/organisatienaam>
+	rdfs:isDefinedBy <http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio> ;
+	rdf:type sh:PropertyShape ;
+	rdfs:subClassOf <http://lod.onderwijsregistratie.nl/cat/cdm/sh/organisatienaam> ;
+	sh:name "naam"@nl ;
+	sh:nodeKind sh:Literal ;
+	sh:path cdm:organisatienaam ;
+    sh:datatype xsd:token ;
+    sh:maxLength 100 ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+.
+
+
+<http://lod.onderwijsregistratie.nl/cat/rio/sh/Organisatie/postcode>
+	rdfs:isDefinedBy <http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio> ;
+	a sh:PropertyShape ;
+	rdfs:subClassOf <http://lod.onderwijsregistratie.nl/cat/cdm/sh/postcode-v01> ;
+	sh:name "postcode"@nl ;
+	sh:nodeKind sh:Literal ;
+	sh:path cdm:postcode ;
+	sh:datatype xsd:string ;
+	sh:minLength 6 ;
+	sh:maxLength 6 ;
+	sh:minCount 1 ;
+	sh:maxCount 1 ;
+	sh:pattern "([1-9]{1}[0-9]{3}[A-Z]{2})" ;
+.
+
+# --------------------------------------------------------------------------------------------------------------
+#   Enumeratie plus literals
+# --------------------------------------------------------------------------------------------------------------
+
+<http://lod.onderwijsregistratie.nl/cat/rio/sh/Denominatie>
+	rdf:type sh:NodeShape ;
+	rdfs:isDefinedBy <http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio> ;
+	rdfs:subClassOf <http://lod.onderwijsregistratie.nl/cat/cdm/sh/Denominatie-v04> ;
+	sh:name "Denominatie"@nl ;
+	sh:targetClass <http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie> ;
+	sh:in (
+		<http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/OPB>
+		<http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/RK>
+	) ;
+.
+
+
+# --------------------------------------------------------------------------------------------------------------
+#   Relatiesoort tussen Samengesteld Gegevenstypen: OBJECTPROPERTY
+# --------------------------------------------------------------------------------------------------------------
+
+rio:biedtAan
+	rdfs:isDefinedBy <http://lod.onderwijsregistratie.nl/doc/ontology/v1/rio> ;
+	rdfs:label "biedtAan"@nl ;
+	a owl:ObjectProperty ;
+.
+

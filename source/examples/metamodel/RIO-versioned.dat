@@ -1,0 +1,34 @@
+@prefix riom: <http://lod.onderwijsregistratie.nl/cat/rio/def/> .
+@prefix rio: <http://lod.onderwijsregistratie.nl/cat/rio/id/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix cdm: <http://lod.onderwijsregistratie.nl/cat/cdm/def/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+    <http://lod.onderwijsregistratie.nl/rio/id/Onderwijsaanbieder/100A001>
+        rdf:type riom:Onderwijsaanbieder ;
+        rdfs:label "CSG Liudger"@nl ;
+        riom:biedtAan	<http://lod.onderwijsregistratie.nl/rio/id/Opleidingseenheid/26000-SBB-MIDDENKADEROPLEIDING> ;
+        cdm:postcode "8262BP" ;
+        cdm:denominatie <http://lod.onderwijsregistratie.nl/cat/cdm/def/Denominatie/OPB> ;
+        .
+				
+    <http://lod.onderwijsregistratie.nl/rio/id/Opleidingseenheid/26000-SBB-MIDDENKADEROPLEIDING>
+        rdf:type riom:Opleiding ;
+        rdfs:label "dakdekker"@nl ;
+		.
+
+    <http://lod.onderwijsregistratie.nl/rio/id/Onderwijsbestuur/100B670>
+        rdf:type riom:Organisatie ;
+        rdfs:label "Stichting Grafisch Lyceum Rotterdam"@nl ;
+        cdm:postcode "8262BX" ;
+        cdm:organisatienaam "Stichting Grafisch Lyceum Rotterdam"^^xsd:token ;
+        .
+		
