@@ -2,11 +2,8 @@
 
 This directory contains  a small imaginary data example, from the RIO world (Register Instellingen en Opleiding = Registry for Schools and Education in the Netherlands). It is spiked with canonical rich datatypes including a bit of versioning.
 
-The original is Turtle:
-
-* RIO-sync.ttl
-
-This is transformed into rdf/xml because that is what XSLT acts upon. However, there seem to be major differences to express linked datacontent with rdf/xml. 
+The original is a Turtle-file (see subdirectory).  This is transformed into rdf/xml because that is what XSLT acts upon. However, 
+there seem to be major differences to express linked datacontent with rdf/xml:
 
       > format 1
       - <owl:Class rdf:about="http://lod.onderwijsregistratie.nl/cat/rio/def/Opleiding">
