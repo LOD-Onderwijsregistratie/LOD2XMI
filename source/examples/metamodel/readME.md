@@ -46,7 +46,7 @@ What follows is a description of the rdf constructions used to describe any M1-m
 
 ![](https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/source/examples/metamodel/figuur10.JPG "figure 10.  Classes")
 
-  A class has attributes which are classified by a canonical rich datatype or an enumeration. 
+  A class has attributes that are classified by a canonical rich datatype or an enumeration. 
 
 
 
