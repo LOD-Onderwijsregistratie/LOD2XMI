@@ -13,11 +13,11 @@ Expressed in UML the datamodel sample looks like this:
 
 ![](https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/source/examples/metamodel/figuur03.JPG "figure 3.  UML sample")
 
-What follows is a description of the rdf constructions used to descibe a M1-model in general. This is the M2-layer in de 4 layer model. It is created with the requirement that its constructions follows MIM (also M2-layer). 
+What follows is a description of the rdf constructions used to describe any M1-model in general. This is the M2-layer in de 4 layer model. It is created with the requirement that it follows MIM (also M2-layer). 
 
 1  Coretypes (standard)
 
-   Specification languages have as a rule some coretypes like string or integer. Often they are alike but not equal. In MIM the next list (called GAB) is adopted 
+   Specification languages have as a rule coretypes like string or integer. Often they are alike but not equal. In MIM the next list (called GAB) is adopted 
 
 ![](https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/source/examples/metamodel/figuur07.JPG "figure 7.  Coretypes")
 
