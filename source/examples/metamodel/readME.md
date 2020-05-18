@@ -6,8 +6,8 @@ Object Management Group (OMG) defines four layers for modeldrive engineering. Ne
 ![](https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/source/examples/metamodel/figuur06.JPG "figure 6.  OMG Layers")
 
 This directory contains  a small sample of a datamodel in turtle serialization (M1 in the 4-layer model). This
-file can be imported in tools that do rdf. It works as as shacl-graph. This means that it can be used to validate a data-graph with 
-instances from reality (M0 in the 4-layer model). A tiny M0-datagraph is also added to experiment with, maybe using https://shacl.org/playground.
+file can be imported in tools that do rdf. It works as as __shacl-graph__. This means that it can be used to validate a data-graph with 
+instances from reality (M0 in the 4-layer model). A tiny data-graph (M0) is also added to experiment with, maybe using https://shacl.org/playground.
 
 Expressed in UML the datamodel sample looks like this:
 
