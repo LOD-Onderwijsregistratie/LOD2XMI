@@ -11,7 +11,7 @@ The result of XSLT transformation is a XMI-file that can be imported in UML-tool
 
 *  XSL Output-snipper-mim
 
-   The same model-samples but this time with MIM-stereotypes added. To do: add MIM obligatory tagged values.
+   The same model-samples but this time with MIM-stereotypes and MIM-coretypes added. To do: add MIM obligatory tagged values.
 
 *  XSL Output-RIO-uml
 
@@ -19,5 +19,5 @@ The result of XSLT transformation is a XMI-file that can be imported in UML-tool
 
 *  XSL Output-RIO-mim
 
-   The same model-samples but this time with MIM-stereotypes added. To do: add MIM obligatory tagged values.
+   The same model-samples but this time with MIM-stereotypes and MIM-coretypes added. To do: add MIM obligatory tagged values.
 
