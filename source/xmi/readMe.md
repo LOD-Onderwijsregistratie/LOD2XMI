@@ -11,7 +11,7 @@ The result of XSLT transformation is a XMI-file that can be imported in tools fo
 
 *  XSL Output-snipper-uml
 
-   The same data-samples but this time MIM-stereotypes as added
+   The same data-samples but this time with MIM-stereotypes added
 
 *  XSL Output-RIO
 
