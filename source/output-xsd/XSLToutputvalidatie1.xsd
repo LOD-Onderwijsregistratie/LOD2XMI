@@ -138,7 +138,7 @@
 						<xs:enumeration value="minLength"/>
 						<xs:enumeration value="pattern"/>
 						<xs:enumeration value="rdfAbout"/>
-						<xs:enumeration value="replacedBy"/>
+						<xs:enumeration value="isReplacedBy"/>
 						<xs:enumeration value="upperBound"/>
 					</xs:restriction>
 				</xs:simpleType>
