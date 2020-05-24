@@ -11,7 +11,7 @@ In the world of linked open data (LOD) instance data is closely related to the O
 
 The OWL-elements point to skos:Concepts containing the explanation of there use to humans.  The Simple Knowlegde Organization System (SKOS) is "comply-or-explain"  for this kind of publication from the Dutch government.  These terms and there relationsips even higer level terms are expressed als skos:Concepts.
 
-Also, in de figure above SHACL can be found. In de linked data world this can be used for validation of instancedata like a XML-file can be validated with a XML Schema Diagram (XSD). For example, with SHACL it can be expressed that a school published as Linked Open Data is only valid when a zipcode is present and that it has a certain format.
+Also, in de figure above SHACL can be found. In de linked data world machines use this for validation of instance data like a XML-file can be validated with a XML Schema Diagram (XSD). For example, with SHACL it can be specified that a school published as Linked Open Data is only valid when a zipcode is present and that it has a certain format.
 
 This GITHUB repository is dedicated to the consumption of modelinformation on the world wide web or semantic web. Models are mostly created using the  grafical modelling language UML in some modelling tool and more and more often published as linked open data. The goal is to reuse model information in another modelling tool. That must be possible when the OWL/SHACL publication is transformed into the XML Metadata Interchange (XMI). By consequently following this route the semantic web becomes what Tim Berners-Lee meant: a global dataspace.
 
