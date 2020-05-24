@@ -43,7 +43,7 @@ Object Management Group (OMG) defines four layers for modeldriven engineering. N
 
 This directory contains  a small sample of a datamodel in turtle serialization (M1 in the 4-layer model). This
 file can be imported in tools that do rdf. It works as as __shacl-graph__. This means that it can be used to validate a data-graph with 
-instances from reality (M0 in the 4-layer model). A tiny data-graph (M0) is also added to experiment with, maybe using https://shacl.org/playground.  To visualize the M1-model in UML it looks like this:
+instances from reality (M0 in the 4-layer model). A tiny data-graph (M0) is also added to experiment with, maybe using https://shacl.org/playground.  To visualize the M1-model in UML, it looks like this:
 
 ![](https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/source/examples/metamodel/figuur03.JPG "figure 3.  UML sample")
 
@@ -60,7 +60,7 @@ What follows is a specification of the rdf patterns used to describe any M1-mode
 
 2  Rich datatypes (canonical)
 
-  A rich datatype is a datatype at a national level that is made available for re-use without the need to define it again in an other environment.. 
+  A rich datatype is a datatype at a national level that is made available for re-use without the need to define it again in an other environment.
 
 ![](https://github.com/LOD-Onderwijsregistratie/LOD2XMI/blob/master/source/examples/metamodel/figuur08.JPG "figure 8.  Rich datatype")
 
