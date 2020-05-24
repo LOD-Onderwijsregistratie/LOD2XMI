@@ -27,14 +27,18 @@ To express a logical model the Linked Data languages  __OWL and SHACL__ (prefix 
 
 __Canonical and specific datamodels__
 
-Modelelements are made re-usable by submitting them into a canonical datamodel (cdm) and using them as (rich) datatypes in specific datamodels (sdm).
+Modelelements in a canonical datamodel (cdm) called rich datatypes can be re-used in specific datamodels (sdm):
 
 ![](https://github.com/LOD-Onderwijsregistratie/RDF2XMI2UML/blob/master/documentation/figuur05.JPG "canonical or specific")
 
+
+
 Constraints or integrityrules defined in the shapes. Nodeshapes define the properties that a class can have and the propertyshapes defines more sofisticated constraints like core datatypes, minimum and maximum length, regular expresssions, enumerationlists and cardinality. This is similar to the XML Schema Definition (XSD) language for datatraffic.
 
-The propertyshaps in a specific datamodel are derived from (a specialisation of) a canonical propertyshape.  In this picture denoted by an atrow with a hollow point. This is a way to express a rich datatype that can be re-used in many contexts. Only the cardinality, the minimum and/or maximum number of occurences, is locally defined.
+The propertyshaps in a specific datamodel are derived from (a specialisation of) a canonical propertyshape.  In this picture denoted by an arrow with a hollow point. This is a way to express a rich datatype that can be re-used in many contexts. Only the cardinality, the minimum and/or maximum number of occurences, is locally defined.
 
+
+__Metamodel__
 
 
 
