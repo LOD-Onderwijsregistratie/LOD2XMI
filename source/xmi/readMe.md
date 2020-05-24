@@ -15,7 +15,7 @@ The result of XSLT transformation is a XMI-file that can be imported in UML-tool
 
 *  XSL Output-RIO-uml
 
-   Transformation of the data model part of the Dutch Register Instellingen en Opleidingen (RIO, about schools en courses). This model describes the RIO-data that is actually published as linked data. See als:  http://lod.onderwijsregistratie.nl.  Note: This linked data model does not have the same pattern described her yet. This wil be changed in a next release. 
+   Transformation of the data model part of the Dutch Register Instellingen en Opleidingen (RIO, about schools en courses). This model describes the RIO-data that is actually published as linked data. See als:  http://lod.onderwijsregistratie.nl.  Note: This linked data model does not have the same pattern described in this github  yet. This wil be changed in a next release. 
 
 *  XSL Output-RIO-mim
 
